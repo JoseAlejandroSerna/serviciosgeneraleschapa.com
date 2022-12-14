@@ -122,7 +122,7 @@
                                 data-start="1700"  
                                 data-easing="easeOutBack">
 
-                                <h1 style=""><span>Expertise</span> <br>
+                                <h1><span>Expertise</span> <br>
                                 you Can Trust</h1>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br> sed do eiusmod tempor incididunt ut labore et dolore <br> magna aliqua. Ut enim ad minim veniam exercitation.</p>
                                 <button class="hvr-bounce-to-right">learn more</button>
