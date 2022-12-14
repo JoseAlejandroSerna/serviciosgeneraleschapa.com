@@ -27,4 +27,5 @@ define("TABLE_CONTACT", "Contact");
 define("TABLE_CLIENT", "Client");
 define("TABLE_CHOOSE", "Choose");
 define("TABLE_SOCIAL_NETWORKS", "SocialNetworks");
+define("TABLE_GENERAL", "General");
 ?>

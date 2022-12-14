@@ -1,10 +1,15 @@
 <html lang="en" class="">
     <?php include('header.php') ?>
-
+    
 	<body>
 
 	    <div class="preloader"></div>
 
+
+        <script>
+            var socialNetworks = <?php echo $socialNetworks; ?>;
+
+        </script>
         <section id="topbar" class="home-v2">
             <div class="container">
                 <div class="row">
