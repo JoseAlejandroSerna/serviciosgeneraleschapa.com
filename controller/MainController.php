@@ -12,7 +12,6 @@ class MainController extends ControladorBase{
     
     public function index(){
 
-        //Cargamos la vista index y le pasamos valores
         $this->view("index",array(
             "view" => CONTROLADOR_MAIN
         ));

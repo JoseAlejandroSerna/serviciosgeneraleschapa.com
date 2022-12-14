@@ -20,12 +20,9 @@ class PromotionModel{
 ////////////////////////////////////////////
 
     public $idPromotion = "0";
-    public $idTypePromotion = "0";
     public $vPromotion = "";
-    public $vDiscount = "";
-    public $iCountPurchase = "0";
-    public $iTotalPurchase = "";
-    public $iStatus = "0";
+    public $vInformation = "";
+    public $vImage = "";
 
     public function getAll(){
         $query=$this->db->query("SELECT * FROM $this->table ORDER BY idPromotion");
@@ -37,30 +34,17 @@ class PromotionModel{
         return $resultSet;
     }
 
-    public function getAll_active(){
-        $query=$this->db->query("SELECT * FROM $this->table WHERE iStatus = 1");
-
-        while ($row = $query->fetch_object()) {
-           $resultSet[]=$row;
-        }
-        
-        return $resultSet;
-    }
-
     public function create()
     {
-        $query="INSERT INTO $this->table (idPromotion,idTypePromotion,vPromotion,vDiscount,iCountPurchase,iTotalPurchase,iStatus) 
+        $query="INSERT INTO $this->table (idPromotion,vPromotion,vInformation,vImage) 
                 VALUES(NULL,
-                        $this->idTypePromotion,
                         '$this->vPromotion',
-                        '$this->vDiscount',
-                        $this->iCountPurchase,
-                        $this->iTotalPurchase,
-                        $this->iStatus);";
+                        '$this->vInformation',
+                        '$this->vImage');";
 
         $save = mysqli_query($this->db(),$query);
         if(!$save){
-            die("QUERY FAILED.".mysqli_error());
+            die("QUERY FAILED.");
         }
     }
 
@@ -68,18 +52,15 @@ class PromotionModel{
     {
         $query="UPDATE $this->table 
                 SET
-                idTypePromotion = $this->idTypePromotion, 
                 vPromotion = '$this->vPromotion',
-                vDiscount = '$this->vDiscount',
-                iCountPurchase = $this->iCountPurchase,
-                iTotalPurchase = $this->iTotalPurchase,
-                iStatus = $this->iStatus
+                vInformation = '$this->vInformation',
+                vImage = '$this->vImage'
                 WHERE
                 idPromotion = $this->idPromotion";
 
         $update = mysqli_query($this->db(),$query);
         if(!$update){
-            die("QUERY FAILED.".mysqli_error());
+            die("QUERY FAILED.");
         }
     }
 

@@ -58,7 +58,7 @@ class SocialNetworksModel{
 
         $update = mysqli_query($this->db(),$query);
         if(!$update){
-            die("QUERY FAILED.".mysqli_error());
+            die("QUERY FAILED.");
         }
         
     }

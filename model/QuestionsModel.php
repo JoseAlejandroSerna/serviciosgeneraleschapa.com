@@ -4,7 +4,7 @@ class QuestionsModel{
     private $conectar;
 
     public function __construct($adapter) {
-        $this->table=(string) TABLE_QUESTIONS;
+        $this->table=(string) TABLE_QUESTION;
         
 		$this->conectar = null;
 		$this->db = $adapter;
@@ -19,23 +19,12 @@ class QuestionsModel{
     }
 ////////////////////////////////////////////
 
-    public $idQuestions = "0";
-    public $idQuiz = "0";
-    public $vQuestions = "";
-    public $iOrder = "0";
+    public $idQuestion = "0";
+    public $vQuestion = "";
+    public $vResponse = "";
 
     public function get_by_id(){
-        $query=$this->db->query("SELECT * FROM $this->table WHERE idQuestions = $this->idQuestions");
-
-        while ($row = $query->fetch_object()) {
-           $resultSet[]=$row;
-        }
-        
-        return $resultSet;
-    }
-
-    public function get_by_Quiz(){
-        $query=$this->db->query("SELECT * FROM $this->table WHERE idQuiz = $this->idQuiz ORDER BY iOrder");
+        $query=$this->db->query("SELECT * FROM $this->table WHERE idQuestion = $this->idQuestion");
 
         while ($row = $query->fetch_object()) {
            $resultSet[]=$row;
@@ -57,15 +46,14 @@ class QuestionsModel{
 
     public function create()
     {
-        $query="INSERT INTO $this->table (idQuestions,idQuiz,vQuestions,iOrder) 
+        $query="INSERT INTO $this->table (idQuestion,vQuestion,vResponse) 
                 VALUES(NULL,
-                        $this->idQuiz,
-                       '$this->vQuestions',
-                        $this->iOrder);";
+                       '$this->vQuestion',
+                        '$this->vResponse');";
 
         $save = mysqli_query($this->db(),$query);
         if(!$save){
-            die("QUERY FAILED.".mysqli_error());
+            die("QUERY FAILED.");
         }
     }
 
@@ -73,15 +61,14 @@ class QuestionsModel{
     {
         $query="UPDATE $this->table 
                 SET 
-                idQuiz = $this->idQuiz,
-                vQuestions = '$this->vQuestions', 
-                iOrder = $this->iOrder 
+                vQuestion = '$this->vQuestion', 
+                vResponse = '$this->vResponse'
                 WHERE
                 idQuestions = $this->idQuestions";
 
         $update = mysqli_query($this->db(),$query);
         if(!$update){
-            die("QUERY FAILED.".mysqli_error());
+            die("QUERY FAILED.");
         }
         
     }
@@ -90,17 +77,7 @@ class QuestionsModel{
     {
         $query="DELETE FROM $this->table 
                 WHERE
-                idQuestions = $this->idQuestions";
-
-        $this->db()->query($query);
-        
-    }
-
-    public function delete_by_Quiz()
-    {
-        $query="DELETE FROM $this->table 
-                WHERE
-                idQuiz = $this->idQuiz";
+                idQuestion = $this->idQuestion";
 
         $this->db()->query($query);
         
