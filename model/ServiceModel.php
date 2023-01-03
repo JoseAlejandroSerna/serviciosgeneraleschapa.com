@@ -22,6 +22,7 @@ class ServiceModel{
     public $idService = "0";
     public $vService = "";
     public $vImage = "";
+    public $vImage2 = "";
 
     public function get_by_id(){
         $query=$this->db->query("SELECT * FROM $this->table WHERE idService = $this->idService");
@@ -34,7 +35,7 @@ class ServiceModel{
     }
 
     public function getAll(){
-        $query=$this->db->query("SELECT * FROM $this->table");
+        $query=$this->db->query("SELECT * FROM $this->table ORDER BY idService");
 
         while ($row = $query->fetch_object()) {
            $resultSet[]=$row;
@@ -48,7 +49,8 @@ class ServiceModel{
         $query="UPDATE $this->table 
                 SET
                 vService = '$this->vService',
-                vImage = '$this->vImage'
+                vImage = '$this->vImage',
+                vImage2 = '$this->vImage2'
                 WHERE
                 idService = $this->idService";
 

@@ -20,8 +20,14 @@ class ChooseModel{
 ////////////////////////////////////////////
 
     public $idChoose = "0";
-    public $vChoose = "";
-    public $vInformation = "";
+    public $vTime = "";
+    public $vTeam = "";
+    public $vSatisfaction = "";
+    public $vEstimate = "";
+    public $vTimeInfo = "";
+    public $vTeamInfo = "";
+    public $vSatisfactionInfo = "";
+    public $vEstimateInfo = "";
 
     public function get_by_id(){
         $query=$this->db->query("SELECT * FROM $this->table WHERE idChoose = $this->idChoose");
@@ -47,8 +53,14 @@ class ChooseModel{
     {
         $query="UPDATE $this->table 
                 SET
-                vChoose = '$this->vChoose',
-                vInformation = '$this->vInformation'
+                vTime = '$this->vTime',
+                vTeam = '$this->vTeam',
+                vSatisfaction = '$this->vSatisfaction',
+                vEstimate = '$this->vEstimate',
+                vTimeInfo = '$this->vTimeInfo',
+                vTeamInfo = '$this->vTeamInfo',
+                vSatisfactionInfo = '$this->vSatisfactionInfo',
+                vEstimateInfo = '$this->vEstimateInfo'
                 WHERE
                 idChoose = $this->idChoose";
 

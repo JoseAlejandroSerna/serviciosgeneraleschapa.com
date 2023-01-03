@@ -2,37 +2,55 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12">
-                <div class="request-for-qoute-wrap"><a href="contact.html" class="request-for-qoute wow slideInDown hvr-bounce-to-right">Request for a Free Quote</a></div>
                 <nav class="footer-menu">
                     <button class="footer-nav-toggler hvr-bounce-to-right">Footer Menu <i class="fa fa-bars"></i></button>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="project-v1.html">Projects</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#topbar">Inicio</a></li>
+                        <li><a href="#who-we-are">Promociones</a></li>
+                        <li><a href="#service-we-provide">Servicios</a></li>
+                        <li><a href="#our-projects">Proyectos</a></li>
+                        <li><a href="pricing-content">Precios</a></li>
+                        <li><a href="#contact-content">Contáctanos</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
         <div class="row">
-            <!-- .widget -->
+
             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 widget">
-                <h3>About Us</h3>
-                <p>Lorem ipsum dolor sit amet, consect- <br>etur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ali qua. Ut enim ad minim veniam, quis no strud exercitation ullamco. Ut enim ad minim.</p>
-                <a href="#" class="read-more">Read More <i class="fa fa-angle-double-right"></i></a>
+                <?php 
+                $vInformation = "";
+                foreach($contact as $info) {
+                    $vInformation = $info->vInformation;
+                    }?>
+                <h3>Conocenos</h3>
+                <p><?php echo $vInformation; ?></p>
+
                 <ul class="social">
-                    <li><a href="#" class="hvr-radial-out"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#" class="hvr-radial-out"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#" class="hvr-radial-out"><i class="fa fa-google-plus"></i></a></li>
-                    <li><a href="#" class="hvr-radial-out"><i class="fa fa-linkedin"></i></a></li>
+                <?php foreach($socialNetworks as $urlSocialNetworks) {?>
+                        
+                    <?php if($urlSocialNetworks->vUrlFacebook != ""){?>
+                        <li><a href="<?php echo $urlSocialNetworks->vUrlFacebook; ?>" target="_blank" class="hvr-radial-out"><i class="fa fa-facebook"></i></a></li>
+                    <?php }?>
+
+                    <?php if($urlSocialNetworks->vUrlInstagram != ""){?>
+                        <li><a href="<?php echo $urlSocialNetworks->vUrlInstagram; ?>" class="hvr-radial-out"><i class="fa fa-instagram"></i></a></li>
+                    <?php }?>
+                    
+                    <?php if($urlSocialNetworks->vUrlTwitter != ""){?>
+                        <li><a href="<?php echo $urlSocialNetworks->vUrlTwitter; ?>" target="_blank" class="hvr-radial-out"><i class="fa fa-twitter"></i></a></li>
+                    <?php }?>
+
+                    <?php if($urlSocialNetworks->vUrlPinterest != ""){?>
+                        <li><a href="<?php echo $urlSocialNetworks->vUrlPinterest; ?>" target="_blank" class="hvr-radial-out"><i class="fa fa-pinterest"></i></a></li>
+                    <?php }?>
+                <?php } ?>
                 </ul>
-            </div> <!-- /.widget -->
-            <!-- .widget -->
+            </div>
+
             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 widget">
-                <h3>popular Posts</h3>
-                <ul class="popular-post">
+                <h3 style="display:none">popular Posts</h3>
+                <ul class="popular-post" style="display:none">
                     <li>
                         <a href="#"><h5>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</h5></a>
                         <p class="date">June 02, 2015</p>
@@ -46,43 +64,38 @@
                         <p class="date">June 02, 2015</p>
                     </li>
                 </ul>
-            </div> <!-- /.widget -->
-            <!-- .widget -->
+            </div> 
+
             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 widget">
-                <h3>Get in Touch</h3>
+                <h3>Contáctanos</h3>
                 <ul class="contact-info">
-                    <li><i class="fa fa-map-marker"></i> Lorance Road 542B, Tailstoi Town <br>5248 MT, Wordwide Country</li>
-                    <li><i class="fa fa-phone"></i> 01865 524 8503</li>
-                    <li><i class="fa fa-envelope-o"></i> contact@plumberx.com</li>
-                    <li><i class="fa fa-globe"></i> http://plumberx.com</li>
+                <?php foreach($general as $info) {?>
+
+                    <?php if($info->vAddresses != ""){?>
+                        <li><i class="fa fa-map-marker"></i> <?php echo $info->vAddresses; ?></li>
+                    <?php } ?>
+
+                    <?php if($info->vPhone != ""){?>
+                        <li><i class="fa fa-phone"></i> <?php echo $info->vPhone; ?></li>
+                    <?php } ?>
+
+                    <?php if($info->vEmail != ""){?>
+                        <li><i class="fa fa-envelope-o"></i> <?php echo $info->vEmail; ?></li>
+                    <?php } ?>
+                <?php } ?>
                 </ul>
-            </div> <!-- /.widget -->
-            <!-- .widget -->
+            </div> 
+
             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 widget">
-                <img class="positioned wow slideInUp " src="img/resources/footer-man.png" alt="">
-            </div> <!-- /.widget -->
+                <img class="positioned wow slideInUp " src="../assets/images/resources/footer-man.png" alt="">
+            </div>
         </div>
     </div>
 </footer> 
 
-<section id="bottom-bar">
-    <div class="container">
-        <div class="row">
-            <!-- .copyright -->
-            <div class="copyright pull-left">
-                <p>Copyright &copy; Plumberx 2015. All rights reserved. </p>
-            </div> <!-- /.copyright -->
-            <!-- .credit -->
-            <div class="credit pull-right">
-                <p>Created by: DesignArc</p>
-            </div> <!-- /.credit -->
-        </div>
-    </div> 
-</section>
-
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="http://maps.google.com/maps/api/js"></script>
+<script src="https://maps.google.com/maps/api/js"></script>
 <script src="js/gmap.js"></script> 
 <script src="js/wow.js"></script> 
 <script src="js/isotope.pkgd.min.js"></script>
@@ -96,3 +109,4 @@
 <script src="js/jquery.scrolly.js"></script>
 <script src="js/jquery.easing.min.js"></script>
 <script src="js/custom.js"></script>
+<script src="js/main.js"></script>

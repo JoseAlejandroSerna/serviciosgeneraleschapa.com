@@ -20,7 +20,7 @@ class ProjectModel{
 ////////////////////////////////////////////
 
     public $idProject = "0";
-    public $idTypeProject = "0";
+    public $idService = "0";
     public $vProject = "";
     public $vInformation = "";
     public $vImage = "";
@@ -49,7 +49,7 @@ class ProjectModel{
     {
         $query="UPDATE $this->table 
                 SET
-                idTypeProject = $this->idTypeProject,
+                idService = $this->idService,
                 vProject = '$this->vProject',
                 vInformation = '$this->vInformation',
                 vImage = '$this->vImage'

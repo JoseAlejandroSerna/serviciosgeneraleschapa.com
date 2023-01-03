@@ -958,7 +958,7 @@ header nav.mainmenu-container ul > li > ul > li > a:hover {
 **/
 
 #our-projects {
-    background: url(../img/our-projects/bg.jpg) 0 0 no-repeat;
+    background: url(../assets/images/our-projects/bg.jpg) 0 0 no-repeat;
     background-size: cover;
     padding: 80px 0;
 }
@@ -1227,7 +1227,7 @@ header nav.mainmenu-container ul > li > ul > li > a:hover {
 **/
 
 #emergency {
-    background: url(../img/emergency/bg.png) top right no-repeat;
+    background: url(../assets/images/emergency/bg.png) top right no-repeat;
     background-size: cover;
 }
 #emergency .container {
@@ -1438,7 +1438,7 @@ header nav.mainmenu-container ul > li > ul > li > a:hover {
 **/
 
 footer {
-    background: url(../img/resources/footer-bg.jpg) 0 0 no-repeat;
+    background: url(../assets/images/resources/footer-bg.jpg) 0 0 no-repeat;
     background-size: cover;
 }
 footer .container {
@@ -1610,7 +1610,7 @@ footer .footer-menu .footer-nav-toggler {
 **/
 
 #page-title {
-    background: url(../img/resources/page-title-bg.jpg) center center no-repeat;
+    background: url(../assets/images/resources/page-title-bg.jpg) center center no-repeat;
     background-size: cover;
     padding: 65px 0;
 }
@@ -1828,7 +1828,7 @@ footer .footer-menu .footer-nav-toggler {
 **/
 
 #featured-service {
-    background: url(../img/featured-service/bg.jpg) 0 0 no-repeat;
+    background: url(../assets/images/featured-service/bg.jpg) 0 0 no-repeat;
     background-size: cover;
     padding: 80px 0;
 }
@@ -2369,7 +2369,7 @@ footer .footer-menu .footer-nav-toggler {
     border-bottom: 1px solid #F0F0F0;
     font-weight: 600;
 }
-#pricing-content .price-table-wrap .price-table button {
+#pricing-content .price-table-wrap .price-table button,#pricing-content .price-table-wrap .price-table .btnPrice {
     font-size: 16px;
     font-weight: bold;
     line-height: 35px;
@@ -2519,7 +2519,7 @@ footer .footer-menu .footer-nav-toggler {
 **/
 
 #emergency.project-v1 {
-    background: #fff url(../img/emergency/bg.png) top right no-repeat;
+    background: #fff url(../assets/images/emergency/bg.png) top right no-repeat;
     background-size: cover;
 }
 /**
@@ -2642,7 +2642,7 @@ footer .footer-menu .footer-nav-toggler {
 **/
 
 #emergency.project-v2 {
-    background: #fff url(../img/emergency/bg.png) top right no-repeat;
+    background: #fff url(../assets/images/emergency/bg.png) top right no-repeat;
     background-size: cover;
 }
 /**
@@ -3316,7 +3316,7 @@ button.mainmenu-toggler:hover {
     margin: auto;
 }
 #project-content.version-2 .section-title h1 {
-    background: url(../img/resources/project-section-title-bg.png) no-repeat bottom center;
+    background: url(../assets/images/resources/project-section-title-bg.png) no-repeat bottom center;
     padding-bottom: 40px;
     border: none;
 }
@@ -3366,7 +3366,7 @@ button.mainmenu-toggler:hover {
     background-color: #ffffff;
     background-position: center center;
     background-repeat: no-repeat;
-    background-image: url(../img/resources/preloader.gif);
+    background-image: url(../assets/images/resources/preloader.gif);
 }
 
 
@@ -3449,7 +3449,7 @@ header.home-v2 ul.mainmenu > li.current > a {
 **/
 
 .home-v2#project-version-two {
-    background: url(../img/our-projects/bg.jpg) center top no-repeat;
+    background: url(../assets/images/our-projects/bg.jpg) center top no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
     padding-bottom: 80px;
@@ -3544,7 +3544,7 @@ header.home-v2 ul.mainmenu > li.current > a {
     padding: 0;
     position: relative;
     margin-bottom: -60px;
-    background: url(../img/resources/contact-bg.png) bottom right no-repeat fixed;
+    background: url(../assets/images/resources/contact-bg.png) bottom right no-repeat fixed;
 }
 .home-v2#contact-content .container {
     padding: 65px 0 50px;
@@ -3742,7 +3742,7 @@ header.home-v2 ul.mainmenu > li.current > a {
 #request-a-qoute-container .tab-content form ul li:focus label {
     color: #42B8E9;
 }
-#request-a-qoute-container .tab-content form ul li input {
+#request-a-qoute-container .tab-content form ul li input,#request-a-qoute-container .tab-content form ul li select {
     display: block;
     height: 35px;
     width: 100%;
@@ -3917,7 +3917,7 @@ header.header-v1.header-fixed .top-info {
 
 #header-v1-banner {
     padding: 320px 0 0px;
-    background: url(../img/slides/image6.jpg) no-repeat center center;
+    background: url(../assets/images/slides/image6.jpg) no-repeat center center;
     -webkit-background-size: cover;
     background-size: cover;
     height: 100vh;
@@ -4094,7 +4094,7 @@ header.header-v3 .mainmenu-container ul li.top-icons a:before {
 **/
 
 #banner.header-v3 {
-    background: url(../img/slides/image7.jpg) center top no-repeat;
+    background: url(../assets/images/slides/image7.jpg) center top no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
     padding: 135px 0 100px;
@@ -4304,7 +4304,7 @@ header.header-v4 .mainmenu-container ul li.top-icons a:before {
 
 #banner.header-v2 {
     padding: 285px 0 160px;
-    background: url(../img/slides/image4.jpg) right top no-repeat;
+    background: url(../assets/images/slides/image4.jpg) right top no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
 }
@@ -4322,7 +4322,7 @@ header.header-v4 .mainmenu-container ul li.top-icons a:before {
 }
 #banner.header-v2 .header-v2-caption {
     margin-top: 40px;
-    background: url(../img/resources/header-v2-banner-lines.png) 40px 0 no-repeat;
+    background: url(../assets/images/resources/header-v2-banner-lines.png) 40px 0 no-repeat;
     -webkit-background-size: 100% 100%;
     background-size: 100% 100%;
 }
@@ -4553,7 +4553,7 @@ header.header-v4 .mainmenu-container ul li.top-icons a:before {
     padding: 165px 0 80px;
 }
 #page-404-content .container {
-    background: url(../img/404/404-bg.jpg) 0 0 no-repeat;
+    background: url(../assets/images/404/404-bg.jpg) 0 0 no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
     position: relative;
@@ -4707,7 +4707,7 @@ header.header-v4 .mainmenu-container ul li.top-icons a:before {
     overflow: hidden;
     background-color: #fff;
 
-    background: #fff url(../img/cart/select-box-bg.png) no-repeat 80% 50%;
+    background: #fff url(../assets/images/cart/select-box-bg.png) no-repeat 80% 50%;
 }
 
 .cart-page .table > tbody > tr > td .select-box select {
@@ -4864,7 +4864,7 @@ header.header-v4 .mainmenu-container ul li.top-icons a:before {
     overflow: hidden;
     background-color: #fff;
 
-    background: #fff url(../img/cart/select-box-bg.png) no-repeat 95% 50%;
+    background: #fff url(../assets/images/cart/select-box-bg.png) no-repeat 95% 50%;
 }
 
 #checkout-content .select-box select {

@@ -20,8 +20,9 @@ class SliderModel{
 ////////////////////////////////////////////
 
     public $idSlider = "0";
+    public $vSlider = "";
+    public $vInformnation = "";
     public $vImage = "";
-    public $vDateCreation = "";
 
     public function get_by_id(){
         $query=$this->db->query("SELECT * FROM $this->table WHERE idSlider = $this->idSlider");
@@ -47,6 +48,8 @@ class SliderModel{
     {
         $query="UPDATE $this->table 
                 SET
+                vSlider = '$this->vSlider'.
+                vInformnation = '$this->vInformnation'.
                 vImage = '$this->vImage'
                 WHERE
                 idSlider = $this->idSlider";
