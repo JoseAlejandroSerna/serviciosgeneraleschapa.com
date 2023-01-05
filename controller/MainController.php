@@ -54,7 +54,7 @@ class MainController extends ControladorBase{
         $clientModel = new ClientModel($this->adapter);
         $client = $clientModel->getAll();
 
-        $this->view("index",array(
+        $this->view(VIEW_MAIN,array(
 			"socialNetworks"    => $socialNetworks,
 			"general"           => $general,
             "slider"            => $slider,
@@ -69,8 +69,43 @@ class MainController extends ControladorBase{
             "questions"         => $questions,
             "contact"           => $contact,
             "client"            => $client,
-            "view" => CONTROLADOR_MAIN
+            "view" => VIEW_MAIN
         ));
+    }
+
+    public function login()
+    {
+        $idUser         = VALUE_ZERO;
+        $idTypeUser     = VALUE_ZERO;
+        $vUser          = $_POST['vEmail'];
+        $vPassword      = $_POST['vPassword'];
+    
+        $userModel              = new UserModel($this->adapter);
+        $userModel->vUser       = $vUser;
+        $vPassword->vPassword   = $vPassword;
+        $info_user              = $userModel->get_by_user();
+
+        foreach($info_user as $user) {
+            $idUser         = $user->idUser;
+            $idTypeUser     = $user->idTypeUser;
+            $vUser          = $user->vUser;
+            $vPassword      = $user->vPassword;
+        }
+        
+        session_start();
+
+        $_SESSION['idUser']         = $idUser;
+        $_SESSION['idTypeUser']     = $idTypeUser;
+        $_SESSION['vUser']          = $vUser;
+        $_SESSION['vPassword']      = $vPassword;
+
+        if($idTypeUser == TYPE_USER_CLIENTE){
+            $this->redirect(CONTROLADOR_MAIN, ACCION_INDEX);
+        }
+        else{
+            $this->redirect(CONTROLADOR_ADMIN, ACCION_INDEX);
+        }
+        
     }
     
 }

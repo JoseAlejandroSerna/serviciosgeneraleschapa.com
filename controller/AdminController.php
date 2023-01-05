@@ -21,6 +21,11 @@ class AdminController extends ControladorBase{
             ));
         }
         else{
+            unset($_SESSION['idUser']);
+            unset($_SESSION['idTypeUser']);
+            unset($_SESSION['vUser']);
+            unset($_SESSION['vPassword']);
+
             $this->redirect(CONTROLADOR_MAIN, ACCION_INDEX);
         }
     }
@@ -28,10 +33,11 @@ class AdminController extends ControladorBase{
     public function logout()
     {
         session_start();
-        $_SESSION['idUser']         = VALUE_ZERO;
-        $_SESSION['idTypeUser']     = VALUE_ZERO;
-        $_SESSION['vUser']          = "";
-        $_SESSION['vPassword']      = "";
+        
+        unset($_SESSION['idUser']);
+        unset($_SESSION['idTypeUser']);
+        unset($_SESSION['vUser']);
+        unset($_SESSION['vPassword']);
 
         $this->redirect(CONTROLADOR_MAIN, ACCION_INDEX);
     }

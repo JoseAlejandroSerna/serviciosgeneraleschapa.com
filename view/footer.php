@@ -87,7 +87,7 @@
             </div> 
 
             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 widget">
-                <img class="positioned wow slideInUp " src="../assets/images/resources/footer-man.png" alt="">
+                <img class="positioned wow slideInUp " src="<?php echo PATH_RESOURCES; ?>footer-man.png" alt="">
             </div>
         </div>
     </div>
@@ -110,3 +110,4 @@
 <script src="js/jquery.easing.min.js"></script>
 <script src="js/custom.js"></script>
 <script src="js/main.js"></script>
+<script src="js/jsGeneral.js"></script>

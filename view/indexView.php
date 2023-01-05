@@ -14,7 +14,7 @@
                         
                             <?php if($urlSocialNetworks->vUrlFacebook != ""){?>
                                 <li>
-                                    <a href="<?php echo $urlSocialNetworks->vUrlFacebook; ?>" target="_blank">
+                                    <a href="<?php echo $urlSocialNetworks->vUrlFacebook; ?>" target="_blank" style="display: inline;">
                                         <i class="fa fa-facebook"></i>
                                     </a>
                                 </li>
@@ -22,7 +22,7 @@
 
                             <?php if($urlSocialNetworks->vUrlInstagram != ""){?>
                                 <li>
-                                    <a href="<?php echo $urlSocialNetworks->vUrlInstagram; ?>" target="_blank">
+                                    <a href="<?php echo $urlSocialNetworks->vUrlInstagram; ?>" target="_blank" style="display: inline;">
                                         <i class="fa fa-instagram"></i>
                                     </a>
                                 </li>
@@ -30,7 +30,7 @@
                             
                             <?php if($urlSocialNetworks->vUrlTwitter != ""){?>
                                 <li>
-                                    <a href="<?php echo $urlSocialNetworks->vUrlTwitter; ?>" target="_blank">
+                                    <a href="<?php echo $urlSocialNetworks->vUrlTwitter; ?>" target="_blank" style="display: inline;">
                                         <i class="fa fa-twitter"></i>
                                     </a>
                                 </li>
@@ -38,7 +38,7 @@
 
                             <?php if($urlSocialNetworks->vUrlPinterest != ""){?>
                                 <li>
-                                    <a href="<?php echo $urlSocialNetworks->vUrlPinterest; ?>" target="_blank">
+                                    <a href="<?php echo $urlSocialNetworks->vUrlPinterest; ?>" target="_blank" style="display: inline;">
                                         <i class="fa fa-pinterest"></i>
                                     </a>
                                 </li>
@@ -81,28 +81,35 @@
             <div class="search-box">
                 <div class="container">
                     <div class="pull-right search  col-lg-3 col-md-4 col-sm-5 col-xs-12">
-                        <form action="#">
-                            <input type="text" placeholder="Buscar"> <button type="submit"><i class="icon icon-Search"></i></button>
+                        <form method="post" action="<?php echo $helper->url(CONTROLADOR_MAIN,ACTION_LOGIN); ?>">
+                            
+                            <input type="email" name="vEmail" placeholder="Correo">
+                            <input type="password" name="vPassword" placeholder="Contraseña">
+
+                            <button type="submit" style="padding-top: 10px; padding-bottom: 13px;">
+                                <i class="icon icon-Arrow"></i>
+                            </button>
+
                         </form>
                     </div>
                 </div>
             </div>
-            <!--Carrito-->
-            <div class="cart-box">
-                <div class="container">
-                    <div class="pull-right cart col-lg-6 col-xs-12">
-                        <p><i class="icon icon-FullShoppingCart"></i> You Have <span>1 Item</span> in your Cart. Price is <span>$199</span></p>
-                    </div>
-                </div>
-            </div>
-
 
             <div class="container">
                 <div class="row">
 
                     <div class="col-lg-3 col-md-4 col-lg-offset-0 col-md-offset-4 logo">
+                        <?php 
+                            $vLogo = "";
+                            foreach($general as $info) {
+
+                                if($info->vLogo != ""){ 
+                                    $vLogo = $info->vLogo;
+                                }
+                            }
+                        ?>
                         <a href="index.html">
-                            <img src="../assets/images/resources/logo-2.png" alt="Servicios generales Chapa" style="max-height: 55px;">
+                            <img src="<?php echo PATH_RESOURCES; ?><?php echo $vLogo; ?>" alt="Servicios generales Chapa" style="max-height: 55px;">
                         </a>
                     </div>
 
@@ -147,11 +154,11 @@
                                 class="slider-2" 
                                 data-transition="fade" 
                                 data-slotamount="7" 
-                                data-thumb="../assets/images/slides/<?php echo $info->vImage; ?>"
+                                data-thumb="<?php echo PATH_SLIDES; ?><?php echo $info->vImage; ?>"
                                 data-title="WE ARE AVAILABLE">
 
                                 <img 
-                                    src="../assets/images/slides/<?php echo $info->vImage; ?>" 
+                                    src="<?php echo PATH_SLIDES; ?><?php echo $info->vImage; ?>" 
                                     data-bgrepeat="no-repeat" 
                                     data-bgfit="cover" 
                                     data-bgposition="top center"
@@ -193,39 +200,33 @@
                     <div class="col-lg-12">
                         <div class="tab-title">
                             <ul>
-                                <li data-tab-title="residential"><span class="active">Cotizar</span></li>
+                                <li data-tab-title="residential"><span class="active">Cotización rapida</span></li>
                             </ul>
                         </div>
                         <div class="tab-content">
                             <div id="residential">
-                                <form class="rqa-form" action="rqa-send-email.php">
-                                    <ul class="clearfix">
-                                        <li>
-                                            <label>Nombre:</label>
-                                            <input type="text" name="name" placeholder="Ingrese su nombre">
-                                        </li>
-                                        <li>
-                                            <label>Teléfono:</label>
-                                            <input type="text" name="phone" placeholder="ej. 8112345678">
-                                        </li>
-                                        <li>
-                                            <label>Tipo de cotizacion:</label>
-                                            <select name="service">
-                                            <?php foreach($service as $info) { ?>
-                                                <option value="<?php echo $info->idService; ?>"><?php echo $info->vService; ?></option>
-                                            <?php }?>
-                                            </select>
-                                        </li>
-                                        <li>
-                                            <label>Correo:</label>
-                                            <input type="text" name="email" placeholder="ej. serviciosgeneraleschapa@hotmail.com">
-                                        </li>
-                                        <li>
-                                            <label>&nbsp;</label>
-                                            <button type="submit" class="hvr-bounce-to-right">Enviar</button>
-                                        </li>
-                                    </ul>
-                                </form>
+                                <ul class="clearfix">
+                                    <li>
+                                        <label>Nombre:</label>
+                                        <input type="text" id="email_name" name="email_name" placeholder="Ingrese su nombre" onkeypress="return valTeclas(4,event)" onkeyup="fnValidaTeclas(4,this)">
+                                    </li>
+                                    <li>
+                                        <label>Teléfono:</label>
+                                        <input type="text" id="email_phone" name="email_phone" placeholder="ej. 8112345678" maxlength="10" onkeypress="return valTeclas(3,event)" onkeyup="fnValidaTeclas(3,this)" pattern="[0-9]*" inputmode="tel">
+                                    </li>
+                                    <li>
+                                        <label>Tipo de cotizacion:</label>
+                                        <select id="email_service" name="email_service">
+                                        <?php foreach($service as $info) { ?>
+                                            <option value="<?php echo $info->idService; ?>"><?php echo $info->vService; ?></option>
+                                        <?php }?>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <label>&nbsp;</label>
+                                        <button type="submit" class="hvr-bounce-to-right" onclick="BtnCotRapida()">Enviar</button>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -240,7 +241,7 @@
                     <?php foreach($promotion as $info) { ?>
                         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 single-box wow zoomIn" data-wow-duration=".5s" data-wow-delay=".5s">
                             <div class="img-holder">
-                                <img src="../assets/images/who-we-are/<?php echo $info->vImage; ?>" alt="">
+                                <img src="<?php echo PATH_WHO_WE_ARE; ?><?php echo $info->vImage; ?>" alt="">
                             </div>
                             <h2><?php echo $info->vPromotion; ?></h2>
                             <p><?php echo $info->vInformation; ?></p>
@@ -290,7 +291,7 @@
                                             <p><?php echo $info->vInformation; ?></p>
                                             <div class="row">
                                                 <div class="col-lg-6 col-md-12 col-sm-6 col-xs-12">
-                                                    <img src="../assets/images/service-we-provide/<?php echo $info->vImage; ?>">
+                                                    <img src="<?php echo PATH_SERVICE_WE_PROVIDE; ?><?php echo $info->vImage; ?>">
                                                 </div>
                                                 <div class="col-lg-6 col-md-12 col-sm-6 col-xs-12">
                                                     <ul>
@@ -307,7 +308,7 @@
                                             </div>
                                         </div>
                                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 zoomIn">
-                                            <img src="../assets/images/service-we-provide/<?php echo $info->vImage2; ?>" alt="">
+                                            <img src="<?php echo PATH_SERVICE_WE_PROVIDE; ?><?php echo $info->vImage2; ?>" alt="">
                                         </div>
                                     </div>
                                     <div id="service-<?php echo $info->idService; ?>">
@@ -315,7 +316,7 @@
                                             <p><?php echo $info->vInformation; ?></p>
                                             <div class="row">
                                                 <div class="col-lg-6 col-md-12 col-sm-6 col-xs-12">
-                                                    <img src="../assets/images/service-we-provide/<?php echo $info->vImage; ?>">
+                                                    <img src="<?php echo PATH_SERVICE_WE_PROVIDE; ?><?php echo $info->vImage; ?>">
                                                 </div>
                                                 <div class="col-lg-6 col-md-12 col-sm-6 col-xs-12">
                                                     <ul>
@@ -332,7 +333,7 @@
                                             </div>
                                         </div>
                                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 zoomIn">
-                                            <img src="../assets/images/service-we-provide/<?php echo $info->vImage2; ?>" alt="">
+                                            <img src="<?php echo PATH_SERVICE_WE_PROVIDE; ?><?php echo $info->vImage2; ?>" alt="">
                                         </div>
                                     </div>
                                 <?php }else{?>
@@ -341,7 +342,7 @@
                                             <p><?php echo $info->vInformation; ?></p>
                                             <div class="row">
                                                 <div class="col-lg-6 col-md-12 col-sm-6 col-xs-12">
-                                                    <img src="../assets/images/service-we-provide/<?php echo $info->vImage; ?>">
+                                                    <img src="<?php echo PATH_SERVICE_WE_PROVIDE; ?><?php echo $info->vImage; ?>">
                                                 </div>
                                                 <div class="col-lg-6 col-md-12 col-sm-6 col-xs-12">
                                                     <ul>
@@ -358,7 +359,7 @@
                                             </div>
                                         </div>
                                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 zoomIn">
-                                            <img src="../assets/images/service-we-provide/<?php echo $info->vImage2; ?>" alt="">
+                                            <img src="<?php echo PATH_SERVICE_WE_PROVIDE; ?><?php echo $info->vImage2; ?>" alt="">
                                         </div>
                                     </div>
                                 <?php }?>
@@ -401,9 +402,9 @@
                         <?php foreach($project as $info) { ?>
 
                             <div class="masonary-item width-1 service-<?php echo $info->idService; ?>">
-                                <a class="fancybox" href="../assets/images/our-projects/<?php echo $info->vImage; ?>">
+                                <a class="fancybox" href="<?php echo PATH_OUR_PROJECTS; ?><?php echo $info->vImage; ?>">
                                     <div class="img-wrap">
-                                        <img src="../assets/images/our-projects/<?php echo $info->vImage; ?>" alt="">
+                                        <img src="<?php echo PATH_OUR_PROJECTS; ?><?php echo $info->vImage; ?>" alt="">
                                         <div class="content-wrap">
                                             <div class="border">
                                                 <div class="content">
@@ -472,7 +473,7 @@
                         <?php if($info->vTime != ""){?>
                             <div class="col-lg-3 col-md-6 col-sm-6">
                                 <div class="img-wrap wow fadeInDown">
-                                    <img src="../assets/images/why-choose-us/icon/1.png" alt="">
+                                    <img src="<?php echo PATH_ICON_WHY_CHOOSE_US; ?>1.png" alt="">
                                 </div>
                                 <h4><?php echo $info->vTime; ?></h4>
                                 <p><?php echo $info->vTimeInfo; ?></p>
@@ -482,7 +483,7 @@
                         <?php if($info->vTeam != ""){?>
                             <div class="col-lg-3 col-md-6 col-sm-6">
                                 <div class="img-wrap wow fadeInDown" data-wow-delay=".3s">
-                                    <img src="../assets/images/why-choose-us/icon/2.png" alt="">
+                                    <img src="<?php echo PATH_ICON_WHY_CHOOSE_US; ?>2.png" alt="">
                                 </div>
                                 <h4><?php echo $info->vTeam; ?></h4>
                                 <p><?php echo $info->vTeamInfo; ?></p>
@@ -492,7 +493,7 @@
                         <?php if($info->vSatisfaction != ""){?>
                             <div class="col-lg-3 col-md-6 col-sm-6">
                                 <div class="img-wrap wow fadeInDown" data-wow-delay=".3s">
-                                    <img src="../assets/images/why-choose-us/icon/3.png" alt="">
+                                    <img src="<?php echo PATH_ICON_WHY_CHOOSE_US; ?>3.png" alt="">
                                 </div>
                                 <h4><?php echo $info->vSatisfaction; ?></h4>
                                 <p><?php echo $info->vSatisfactionInfo; ?></p>
@@ -502,7 +503,7 @@
                         <?php if($info->vEstimate != ""){?>
                             <div class="col-lg-3 col-md-6 col-sm-6">
                                 <div class="img-wrap wow fadeInDown" data-wow-delay=".3s">
-                                    <img src="../assets/images/why-choose-us/icon/4.png" alt="">
+                                    <img src="<?php echo PATH_ICON_WHY_CHOOSE_US; ?>4.png" alt="">
                                 </div>
                                 <h4><?php echo $info->vEstimate; ?></h4>
                                 <p><?php echo $info->vEstimateInfo; ?></p>
@@ -577,7 +578,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3 col-md-3">
-                        <img class="wow bounceInLeft" src="../assets/images/emergency/man.png" alt="">
+                        <img class="wow bounceInLeft" src="<?php echo PATH_EMERGENCY; ?>man.png" alt="">
                     </div>
                     <div class="col-lg-offset-3 col-md-offset-3 col-lg-9 col-md-9">
                         <h2>Emergency Leaks & <span>Pipe Bursts</span></h2>
@@ -590,7 +591,7 @@
 
         <section id="pricing-faq" class="home-v2">
             <div class="parallax-container">
-                <div class="parallax bg-img-sharp-effect" data-velocity="-.5"  style="background-image: url(../assets/images/resources/pricing-faq-bg.jpg);"></div>
+                <div class="parallax bg-img-sharp-effect" data-velocity="-.5"  style="background-image: url(<?php echo PATH_RESOURCES; ?>pricing-faq-bg.jpg);"></div>
             </div>
             <div class="container">
                 <div class="section-title">
@@ -643,7 +644,7 @@
 
                             <?php if($info->vAddresses != ""){?>
                                 <li class="clearfix">
-                                    <img src="../assets/images/contact-page/icon/1.png" alt=""> 
+                                    <img src="<?php echo PATH_ICON_CONTACT_PAGE; ?>1.png" alt=""> 
                                     <div class="content">
                                         <h4>Oficina</h4>
                                         <p><?php echo $info->vAddresses; ?></p>
@@ -653,7 +654,7 @@
 
                             <?php if($info->vPhone != ""){?>
                                 <li class="clearfix">
-                                    <img src="../assets/images/contact-page/icon/3.png" alt=""> 
+                                    <img src="<?php echo PATH_ICON_CONTACT_PAGE; ?>3.png" alt=""> 
                                     <div class="content">
                                         <h4>Teléfono</h4>
                                         <p><?php echo $info->vPhone; ?></p>
@@ -662,7 +663,7 @@
                             <?php } ?>
                             <?php if($info->vEmail != ""){?>
                                 <li class="clearfix">
-                                    <img src="../assets/images/contact-page/icon/2.png" alt=""> 
+                                    <img src="<?php echo PATH_ICON_CONTACT_PAGE; ?>2.png" alt=""> 
                                     <div class="content">
                                         <h4>Correo</h4>
                                         <p><?php echo $info->vEmail; ?></p>
@@ -685,7 +686,7 @@
                         <div class="owl-carousel owl-theme">
                             <?php foreach($client as $info) { ?>
                                 <div class="item">
-                                    <img src="../assets/images/clients/<?php echo $info->vImage; ?>" alt="">
+                                    <img src="<?php echo PATH_CLIENTS; ?><?php echo $info->vImage; ?>" alt="">
                                 </div>
                             <?php  }?>
                         </div>

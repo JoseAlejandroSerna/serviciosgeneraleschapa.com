@@ -23,6 +23,7 @@ class GeneralModel{
     public $vPhone = "";
     public $vEmail = "";
     public $vAddresses = "";
+    public $vLogo = "";
 
     public function get_by_id(){
         $query=$this->db->query("SELECT * FROM $this->table WHERE idGeneral = $this->idGeneral");
@@ -46,11 +47,12 @@ class GeneralModel{
 
     public function create()
     {
-        $query="INSERT INTO $this->table (idGeneral,vPhone,vEmail,vAddresses) 
+        $query="INSERT INTO $this->table (idGeneral,vPhone,vEmail,vAddresses,vLogo) 
                 VALUES(NULL,
                        '$this->vPhone',
                         '$this->vEmail',
-                        '$this->vAddresses');";
+                        '$this->vAddresses',
+                        '$this->vLogo');";
 
         $save = mysqli_query($this->db(),$query);
         if(!$save){
@@ -72,7 +74,20 @@ class GeneralModel{
         if(!$update){
             die("QUERY FAILED.");
         }
-        
+    }
+
+    public function update_logo()
+    {
+        $query="UPDATE $this->table 
+                SET
+                vLogo = '$this->vLogo'
+                WHERE
+                idGeneral = $this->idGeneral";
+
+        $update = mysqli_query($this->db(),$query);
+        if(!$update){
+            die("QUERY FAILED.");
+        }
     }
 
     public function delete()

@@ -262,7 +262,8 @@ header .mainmenu-container ul li {
     transition: all .3s ease;
 }
 header .mainmenu-container ul li a {
-    display: inline-block;
+    /*display: inline-block;*/
+    display: list-item;
     font-size: 14px;
     color: #515050;
     font-weight: 700;
@@ -306,9 +307,11 @@ header .search-box {
     display: none;
 }
 header .search-box form {
+    /*
     background: #fff;
     border: 1px solid #fff;
     height: 35px;
+    */
     padding: 0px 10px;
     line-height: 35px;
     border-radius: 4px;
@@ -319,6 +322,9 @@ header .search-box form input {
     background: none;
     border: none;
     outline: none;
+    margin: 8px 0px;
+    background: #fff;
+    border: 1px solid #fff;
 }
 header .search-box form button {
     background: none;
