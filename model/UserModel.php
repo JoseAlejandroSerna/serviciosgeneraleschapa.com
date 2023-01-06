@@ -35,7 +35,11 @@ class UserModel{
     }
 
     public function get_by_user(){
-        $query=$this->db->query("SELECT * FROM $this->table WHERE vUser = '$this->vUser' AND vPassword = '$this->vPassword'");
+        $query=$this->db->query("SELECT * FROM $this->table 
+                                    WHERE 
+                                    vUser = '$this->vUser' 
+                                    AND 
+                                    vPassword = '$this->vPassword'");
 
         while ($row = $query->fetch_object()) {
            $resultSet[]=$row;

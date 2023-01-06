@@ -30,8 +30,7 @@
         $view == "AdminSize" || 
         $view == "AdminCard" || 
         $view == "AdminKidByCard" || 
-        $view == "AdminPromotion" || 
-        $view == CONTROLADOR_ADMIN_WAITING_LIST){?>
+        $view == "AdminPromotion"){?>
         
     <script src="js/admin/raphael.min.js"></script>
     <script src="js/admin/jquery.sparkline.min.js"></script>
@@ -97,9 +96,6 @@
 <?php }?>
 <?php if($view == "AdminBranch"){?>
     <script src="js/admin/adminBranch.js"></script>
-<?php }?>
-<?php if($view == CONTROLADOR_ADMIN_WAITING_LIST){?>
-    <script src="js/admin/adminWaitingList.js"></script>
 <?php }?>
 
 <?php if($view == "AdminBranchPhone"){?>

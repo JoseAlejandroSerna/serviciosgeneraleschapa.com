@@ -7,9 +7,36 @@ function BtnCotRapida()
 {
     var vName = $("#email_name").val();
     var vPhone = $("#email_phone").val();
-    var vService = $("#email_service").val();
+    var vService = $("#email_service option:selected").text();
 
     var mensaje = "Hola mi nombre es *" + vName + "* y me gustaria realizar una cotizacion de " + vService;
+
+	var link = "https://wa.me/52" + vPhone + "?text=" + mensaje;
+	
+    var a = document.createElement('a');
+    a.setAttribute("href", link);
+    a.setAttribute("target", "_blank");
+
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+	
+    if (/iPad|iPhone|iPod/.test(userAgent)) {
+        var dispatch = document.createEvent("HTMLEvents");
+        dispatch.initEvent("click", true, true);
+        a.dispatchEvent(dispatch);
+    }
+    else {
+        a.click();
+    }
+}
+
+function BtnCot()
+{
+    var vName = $("#cot_name").val();
+    var vPhone = $("#cot_phone").val();
+    var vSubject = $("#cot_subject").val();
+    var vMessage = $("#cot_message").val();
+    
+    var mensaje = "* " + vSubject + " * Hola mi nombre es *" + vName + "* : " + vMessage;
 
 	var link = "https://wa.me/52" + vPhone + "?text=" + mensaje;
 	

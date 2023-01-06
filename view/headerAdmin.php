@@ -5,7 +5,7 @@
     <meta name="description" content />
     <meta name="author" content />
 
-    <title>Administrador - BabyKeep</title>
+    <title>Administrador</title>
 
     <link rel="stylesheet" href="css/admin/perfect-scrollbar.css">
     <link rel="stylesheet" href="css/admin/jquery.bootstrap-touchspin.min.css">

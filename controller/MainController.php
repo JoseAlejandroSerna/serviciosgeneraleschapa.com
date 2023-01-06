@@ -83,14 +83,21 @@ class MainController extends ControladorBase{
         $userModel              = new UserModel($this->adapter);
         $userModel->vUser       = $vUser;
         $vPassword->vPassword   = $vPassword;
-        $info_user              = $userModel->get_by_user();
+        $info_user              = $userModel->getAll();
 
         foreach($info_user as $user) {
-            $idUser         = $user->idUser;
-            $idTypeUser     = $user->idTypeUser;
-            $vUser          = $user->vUser;
-            $vPassword      = $user->vPassword;
+            if($vUser == $user->vUser && $vPassword == $user->vPassword)
+            {
+                $idUser         = $user->idUser;
+                $idTypeUser     = $user->idTypeUser;
+                $vUser          = $user->vUser;
+                $vPassword      = $user->vPassword;
+            }
         }
+        /*
+        echo "idUser:". $idUser ." | idTypeUser:". $idTypeUser ." | vUser:". $vUser ." | vPassword:". $vPassword;
+        echo "<<< info_user:". $info_user;
+        */
         
         session_start();
 
@@ -99,11 +106,11 @@ class MainController extends ControladorBase{
         $_SESSION['vUser']          = $vUser;
         $_SESSION['vPassword']      = $vPassword;
 
-        if($idTypeUser == TYPE_USER_CLIENTE){
-            $this->redirect(CONTROLADOR_MAIN, ACCION_INDEX);
+        if($idTypeUser == TYPE_USER_ADMINISTRADOR){
+            $this->redirect(CONTROLADOR_ADMIN, ACCION_INDEX);
         }
         else{
-            $this->redirect(CONTROLADOR_ADMIN, ACCION_INDEX);
+            $this->redirect(CONTROLADOR_MAIN, ACCION_INDEX);
         }
         
     }

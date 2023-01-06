@@ -3726,12 +3726,12 @@ header.home-v2 ul.mainmenu > li.current > a {
 #request-a-qoute-container .tab-content .success {
     color: #42B8E9;
 }
-#request-a-qoute-container .tab-content form ul li {
+#request-a-qoute-container .tab-content form ul li,#request-a-qoute-container .tab-content ul li {
     width: 20%;
     float: left;
     padding: 0 15px;
 }
-#request-a-qoute-container .tab-content form ul li label {
+#request-a-qoute-container .tab-content form ul li label,#request-a-qoute-container .tab-content ul li label {
     display: block;
     font-family: 'Open Sans';
     font-size: 15px;
@@ -3739,16 +3739,16 @@ header.home-v2 ul.mainmenu > li.current > a {
     font-weight: normal;
     transition: all .3s ease;
 }
-#request-a-qoute-container .tab-content form ul li label.error {
+#request-a-qoute-container .tab-content form ul li label.error, #request-a-qoute-container .tab-content ul li label.error {
     display: none !important;
 }
-#request-a-qoute-container .tab-content form ul li:hover label {
+#request-a-qoute-container .tab-content form ul li:hover label, #request-a-qoute-container .tab-content ul li:hover label {
     color: #FE5454;
 }
-#request-a-qoute-container .tab-content form ul li:focus label {
+#request-a-qoute-container .tab-content form ul li:focus label,#request-a-qoute-container .tab-content ul li:focus label {
     color: #42B8E9;
 }
-#request-a-qoute-container .tab-content form ul li input,#request-a-qoute-container .tab-content form ul li select {
+#request-a-qoute-container .tab-content ul li input,#request-a-qoute-container .tab-content form ul li input,#request-a-qoute-container .tab-content form ul li select,#request-a-qoute-container .tab-content ul li input,#request-a-qoute-container .tab-content ul li select {
     display: block;
     height: 35px;
     width: 100%;
@@ -3758,56 +3758,65 @@ header.home-v2 ul.mainmenu > li.current > a {
     color: #000;
     transition: all .3s ease;
 }
-#request-a-qoute-container .tab-content form ul li input.error {
+#request-a-qoute-container .tab-content form ul li input.error,#request-a-qoute-container .tab-content ul li input.error {
     border-color: red;
 }
-#request-a-qoute-container .tab-content form ul li input:hover {
+#request-a-qoute-container .tab-content form ul li input:hover,#request-a-qoute-container .tab-content ul li input:hover {
     background: #42B8E9;
     color: #fff;
 }
-#request-a-qoute-container .tab-content form ul li input:focus {
+#request-a-qoute-container .tab-content form ul li input:focus, #request-a-qoute-container .tab-content ul li input:focus {
     background: #42B8E9;
     color: #fff;
 }
-#request-a-qoute-container .tab-content form ul li input:focus {
+#request-a-qoute-container .tab-content form ul li input:focus, #request-a-qoute-container .tab-content ul li input:focus {
     background: #42B8E9;
     color: #fff;
 }
-#request-a-qoute-container .tab-content form ul li input::-webkit-input-placeholder {
+#request-a-qoute-container .tab-content form ul li input::-webkit-input-placeholder, #request-a-qoute-container .tab-content ul li input::-webkit-input-placeholder {
    color: #c1c1c1;
 }
 
-#request-a-qoute-container .tab-content form ul li input:-moz-placeholder { /* Firefox 18- */
+#request-a-qoute-container .tab-content form ul li input:-moz-placeholder, #request-a-qoute-container .tab-content ul li input:-moz-placeholder {
    color: #c1c1c1;  
 }
 
-#request-a-qoute-container .tab-content form ul li input::-moz-placeholder {  /* Firefox 19+ */
+#request-a-qoute-container .tab-content form ul li input::-moz-placeholder,#request-a-qoute-container .tab-content ul li input::-moz-placeholder {  /* Firefox 19+ */
    color: #c1c1c1;  
 }
 
-#request-a-qoute-container .tab-content form ul li input:-ms-input-placeholder {  
+#request-a-qoute-container .tab-content form ul li input:-ms-input-placeholder, #request-a-qoute-container .tab-content ul li input:-ms-input-placeholder {  
    color: #c1c1c1;  
 }
 #request-a-qoute-container .tab-content form ul li input:hover::-webkit-input-placeholder,
-#request-a-qoute-container .tab-content form ul li input:focus::-webkit-input-placeholder {
+#request-a-qoute-container .tab-content form ul li input:focus::-webkit-input-placeholder,
+#request-a-qoute-container .tab-content ul li input:hover::-webkit-input-placeholder,
+#request-a-qoute-container .tab-content ul li input:focus::-webkit-input-placeholder {
    color: #fff;
 }
 
 #request-a-qoute-container .tab-content form ul li input:hover:-moz-placeholder,
-#request-a-qoute-container .tab-content form ul li input:focus:-moz-placeholder { /* Firefox 18- */
+#request-a-qoute-container .tab-content form ul li input:focus:-moz-placeholder,
+#request-a-qoute-container .tab-content ul li input:hover:-moz-placeholder,
+#request-a-qoute-container .tab-content ul li input:focus:-moz-placeholder { /* Firefox 18- */
    color: #fff;  
 }
 
 #request-a-qoute-container .tab-content form ul li input:hover::-moz-placeholder,
-#request-a-qoute-container .tab-content form ul li input:focus::-moz-placeholder {  /* Firefox 19+ */
+#request-a-qoute-container .tab-content form ul li input:focus::-moz-placeholder,
+#request-a-qoute-container .tab-content ul li input:hover::-moz-placeholder,
+#request-a-qoute-container .tab-content ul li input:focus::-moz-placeholder {  /* Firefox 19+ */
    color: #fff;  
 }
 
 #request-a-qoute-container .tab-content form ul li input:hover:-ms-input-placeholder,
-#request-a-qoute-container .tab-content form ul li input:focus:-ms-input-placeholder {  
+#request-a-qoute-container .tab-content form ul li input:focus:-ms-input-placeholder,
+#request-a-qoute-container .tab-content ul li input:hover:-ms-input-placeholder,
+#request-a-qoute-container .tab-content ul li input:focus:-ms-input-placeholder {  
    color: #fff;  
 }
-#request-a-qoute-container .tab-content form ul li button {
+#request-a-qoute-container .tab-content form ul li button,
+#request-a-qoute-container .tab-content ul li button {
     background: #FE5454;
     color: #fff;
     border: none;
@@ -3820,10 +3829,13 @@ header.home-v2 ul.mainmenu > li.current > a {
     width: 100%;
 }
 #request-a-qoute-container .tab-content form ul li button:hover,
-#request-a-qoute-container .tab-content form ul li button:focus {
+#request-a-qoute-container .tab-content form ul li button:focus,
+#request-a-qoute-container .tab-content ul li button:hover,
+#request-a-qoute-container .tab-content ul li button:focus {
     color: #FE5454;
 }
-#request-a-qoute-container .tab-content form ul li button:before {
+#request-a-qoute-container .tab-content form ul li button:before,
+#request-a-qoute-container .tab-content ul li button:before {
     background: #fff;
 }
 #request-a-qoute-container .container {

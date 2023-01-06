@@ -205,6 +205,8 @@
                         </div>
                         <div class="tab-content">
                             <div id="residential">
+
+                                <form action="#">    
                                 <ul class="clearfix">
                                     <li>
                                         <label>Nombre:</label>
@@ -227,6 +229,7 @@
                                         <button type="submit" class="hvr-bounce-to-right" onclick="BtnCotRapida()">Enviar</button>
                                     </li>
                                 </ul>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -628,12 +631,20 @@
                 <p><?php echo $vInformation;?></p>
                 <div class="row">	
                     <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 ">
-                        <form action="sendemail.php" class="contact-form">
-                            <p><input type="text" name="name" placeholder="Nombre"></p>
-                            <p><input type="text" name="email" placeholder="Correo"></p>
-                            <p><input type="text" name="subject" placeholder="Asunto"></p>
-                            <p><textarea name="message" placeholder="Message"></textarea></p>
-                            <p><button type="submit">Enviar</button></p>
+                        <form action="#" class="contact-form">
+                            <p>
+                                <input type="text" id="cot_name" name="cot_name" placeholder="Nombre" onkeypress="return valTeclas(4,event)" onkeyup="fnValidaTeclas(4,this)">
+                            </p>
+                            <p>
+                                <input type="text" id="cot_phone" name="cot_phone" placeholder="Teléfono" maxlength="10" onkeypress="return valTeclas(3,event)" onkeyup="fnValidaTeclas(3,this)" pattern="[0-9]*" inputmode="tel">
+                            </p>
+                            <p>
+                                <input type="text" id="cot_subject" name="cot_subject" placeholder="Asunto" onkeypress="return valTeclas(4,event)" onkeyup="fnValidaTeclas(4,this)">
+                            </p>
+                            <p>
+                                <textarea id="cot_message" name="cot_message" placeholder="Mensaje" onkeypress="return valTeclas(4,event)" onkeyup="fnValidaTeclas(4,this)"></textarea>
+                            </p>
+                            <p><button type="submit" onclick="BtnCot()">Enviar</button></p>
                         </form>
                     </div>
                     <div class="col-lg-5 col-md-6 col-sm-4 col-xs-12  col-lg-offset-1  col-md-offset-0  col-sm-offset-0  col-xs-offset-0 contact-info">

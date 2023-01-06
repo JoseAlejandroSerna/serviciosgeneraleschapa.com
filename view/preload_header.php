@@ -8,7 +8,6 @@
 <!--Header--->
 <header>
     <nav class="topnav navbar shadow navbar-expand navbar-light bg-white" id="sidenavAccordion">
-        <a class="navbar-brand d-none d-sm-block " href="index.php"><?php echo $_SESSION['vUser'];?></a>
         <a type="button" id="sidebarToggleTop" class="waves-effect waves-dark btn">
             <span class="h5">
                 <i class="fa fa-server"></i>
