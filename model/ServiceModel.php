@@ -21,6 +21,7 @@ class ServiceModel{
 
     public $idService = "0";
     public $vService = "";
+    public $vInformation = "";
     public $vImage = "";
     public $vImage2 = "";
 
@@ -44,11 +45,27 @@ class ServiceModel{
         return $resultSet;
     }
 
+    public function create()
+    {
+        $query="INSERT INTO $this->table (idService,vService,vInformation,vImage,vImage2) 
+                VALUES(NULL,
+                       '$this->vService',
+                       '$this->vInformation',
+                       '$this->vImage',
+                       '$this->vImage2');";
+
+        $save = mysqli_query($this->db(),$query);
+        if(!$save){
+            die("QUERY FAILED.");
+        }
+    }
+
     public function update()
     {
         $query="UPDATE $this->table 
                 SET
                 vService = '$this->vService',
+                vInformation = '$this->vInformation',
                 vImage = '$this->vImage',
                 vImage2 = '$this->vImage2'
                 WHERE

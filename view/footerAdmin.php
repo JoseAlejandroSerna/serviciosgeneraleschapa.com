@@ -37,6 +37,9 @@
 <?php if($view == VIEW_ADMIN_PROMOTION){?>
     <script src="js/admin/adminPromotion.js"></script>
 <?php }?>
+<?php if($view == VIEW_ADMIN_SERVICE){?>
+    <script src="js/admin/adminService.js"></script>
+<?php }?>
 <?php if($view == "AdminQuestions"){?>
     <script src="js/admin/adminQuestions.js"></script>
 <?php }?>

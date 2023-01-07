@@ -15,44 +15,44 @@ class MainController extends ControladorBase{
         $socialNetworksModel = new SocialNetworksModel($this->adapter);
         $socialNetworks = $socialNetworksModel->getAll();
 
-        $generalModel = new GeneralModel($this->adapter);
-        $general = $generalModel->getAll();
+        $generalModel           = new GeneralModel($this->adapter);
+        $general                = $generalModel->getAll();
 
-        $sliderModel = new SliderModel($this->adapter);
-        $slider = $sliderModel->getAll();
+        $sliderModel            = new SliderModel($this->adapter);
+        $slider                 = $sliderModel->getAll();
 
-        $serviceModel = new ServiceModel($this->adapter);
-        $service = $serviceModel->getAll();
+        $serviceModel           = new ServiceModel($this->adapter);
+        $service                = $serviceModel->getAll();
 
-        $serviceDetailModel = new ServiceDetailModel($this->adapter);
-        $serviceDetail = $serviceDetailModel->getAll();
+        $serviceDetailModel     = new ServiceDetailModel($this->adapter);
+        $serviceDetail          = $serviceDetailModel->getAll();
 
-        $promotionModel = new PromotionModel($this->adapter);
-        $promotion = $promotionModel->getAll();
+        $promotionModel         = new PromotionModel($this->adapter);
+        $promotion              = $promotionModel->getAll();
 
-        $projectModel = new ProjectModel($this->adapter);
-        $project = $projectModel->getAll();
+        $projectModel           = new ProjectModel($this->adapter);
+        $project                = $projectModel->getAll();
 
-        $chooseModel = new ChooseModel($this->adapter);
-        $choose = $chooseModel->getAll();
+        $chooseModel            = new ChooseModel($this->adapter);
+        $choose                 = $chooseModel->getAll();
 
-        $offerInformationModel = new OfferInformationModel($this->adapter);
-        $offerInformation = $offerInformationModel->getAll();
+        $offerInformationModel  = new OfferInformationModel($this->adapter);
+        $offerInformation       = $offerInformationModel->getAll();
 
-        $offerModel = new OfferModel($this->adapter);
-        $offer = $offerModel->getAll();
+        $offerModel             = new OfferModel($this->adapter);
+        $offer                  = $offerModel->getAll();
 
-        $offerDetaiModel = new OfferDetailModel($this->adapter);
-        $offerDetai = $offerDetaiModel->getAll();
+        $offerDetaiModel        = new OfferDetailModel($this->adapter);
+        $offerDetai             = $offerDetaiModel->getAll();
 
-        $questionsModel = new QuestionsModel($this->adapter);
-        $questions = $questionsModel->getAll();
+        $questionsModel         = new QuestionsModel($this->adapter);
+        $questions              = $questionsModel->getAll();
 
-        $contactModel = new ContactModel($this->adapter);
-        $contact = $contactModel->getAll();
+        $contactModel           = new ContactModel($this->adapter);
+        $contact                = $contactModel->getAll();
 
-        $clientModel = new ClientModel($this->adapter);
-        $client = $clientModel->getAll();
+        $clientModel            = new ClientModel($this->adapter);
+        $client                 = $clientModel->getAll();
 
         $this->view(VIEW_MAIN,array(
 			"socialNetworks"    => $socialNetworks,

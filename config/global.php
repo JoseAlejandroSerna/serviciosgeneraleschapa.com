@@ -24,6 +24,7 @@ define("CONTROLADOR_ADMIN_GENERAL", "AdminGeneral");
 define("CONTROLADOR_ADMIN_SLIDER", "AdminSlider");
 define("CONTROLADOR_ADMIN_USER", "AdminUser");
 define("CONTROLADOR_ADMIN_PROMOTION", "AdminPromotion");
+define("CONTROLADOR_ADMIN_SERVICE", "AdminService");
 
 /*------------------------------
 VIEW
@@ -33,6 +34,7 @@ define("VIEW_ADMIN", "admin");
 define("VIEW_ADMIN_GENERAL", "adminGeneral");
 define("VIEW_ADMIN_SLIDER", "adminSlider");
 define("VIEW_ADMIN_PROMOTION", "adminPromotion");
+define("VIEW_ADMIN_SERVICE", "adminService");
 
 /*------------------------------
 FUNCTION
@@ -53,6 +55,7 @@ PATH IMAGE
 define("PATH_RESOURCES_ADMIN", "assets/images/resources/");
 define("PATH_SLIDES_ADMIN", "assets/images/slides/");
 define("PATH_WHO_WE_ARE_ADMIN", "assets/images/who-we-are/");
+define("PATH_SERVICE_WE_PROVIDE_ADMIN", "assets/images/service-we-provide/");
 
 define("PATH_RESOURCES", "../assets/images/resources/");
 define("PATH_SLIDES", "../assets/images/slides/");
@@ -94,10 +97,12 @@ define("TITLE_GENERAL", "Información general");
 define("TITLE_LOGO", "Logo de sitio");
 define("TITLE_SLIDER", "Carrusel principal");
 define("TITLE_PROMOTION", "Promociones");
+define("TITLE_SERVICE", "Servicios");
 
 /*------------------------------
 STYLE
 ------------------------------*/
 define("STYLE_MAX_LOGO", "max-height: 55px;");
 define("STYLE_MAX_HEIGHT_PROMOTION", "max-height: 169px;");
+define("STYLE_MAX_HEIGHT_SERVICE", "max-height: 165px;");
 ?>

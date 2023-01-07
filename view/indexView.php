@@ -294,7 +294,7 @@
                                             <p><?php echo $info->vInformation; ?></p>
                                             <div class="row">
                                                 <div class="col-lg-6 col-md-12 col-sm-6 col-xs-12">
-                                                    <img src="<?php echo PATH_SERVICE_WE_PROVIDE; ?><?php echo $info->vImage; ?>">
+                                                    <img src="<?php echo PATH_SERVICE_WE_PROVIDE; ?><?php echo $info->vImage; ?>" style="<?php echo STYLE_MAX_HEIGHT_SERVICE;?>">
                                                 </div>
                                                 <div class="col-lg-6 col-md-12 col-sm-6 col-xs-12">
                                                     <ul>
@@ -319,7 +319,7 @@
                                             <p><?php echo $info->vInformation; ?></p>
                                             <div class="row">
                                                 <div class="col-lg-6 col-md-12 col-sm-6 col-xs-12">
-                                                    <img src="<?php echo PATH_SERVICE_WE_PROVIDE; ?><?php echo $info->vImage; ?>">
+                                                    <img src="<?php echo PATH_SERVICE_WE_PROVIDE; ?><?php echo $info->vImage; ?>" style="<?php echo STYLE_MAX_HEIGHT_SERVICE;?>">
                                                 </div>
                                                 <div class="col-lg-6 col-md-12 col-sm-6 col-xs-12">
                                                     <ul>
