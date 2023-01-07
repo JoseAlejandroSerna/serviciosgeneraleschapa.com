@@ -32,6 +32,7 @@ define("VIEW_MAIN", "index");
 define("VIEW_ADMIN", "admin");
 define("VIEW_ADMIN_GENERAL", "adminGeneral");
 define("VIEW_ADMIN_SLIDER", "adminSlider");
+define("VIEW_ADMIN_PROMOTION", "adminPromotion");
 
 /*------------------------------
 FUNCTION
@@ -49,8 +50,11 @@ define("ACTION_LOGO", "logo");
 /*------------------------------
 PATH IMAGE
 ------------------------------*/
-define("PATH_RESOURCES", "../assets/images/resources/");
 define("PATH_RESOURCES_ADMIN", "assets/images/resources/");
+define("PATH_SLIDES_ADMIN", "assets/images/slides/");
+define("PATH_WHO_WE_ARE_ADMIN", "assets/images/who-we-are/");
+
+define("PATH_RESOURCES", "../assets/images/resources/");
 define("PATH_SLIDES", "../assets/images/slides/");
 define("PATH_WHO_WE_ARE", "../assets/images/who-we-are/");
 define("PATH_SERVICE_WE_PROVIDE", "../assets/images/service-we-provide/");
@@ -89,9 +93,11 @@ define("TITLE_SOCIAL_NETWORK", "Redes sociales");
 define("TITLE_GENERAL", "Información general");
 define("TITLE_LOGO", "Logo de sitio");
 define("TITLE_SLIDER", "Carrusel principal");
+define("TITLE_PROMOTION", "Promociones");
 
 /*------------------------------
 STYLE
 ------------------------------*/
 define("STYLE_MAX_LOGO", "max-height: 55px;");
+define("STYLE_MAX_HEIGHT_PROMOTION", "max-height: 169px;");
 ?>

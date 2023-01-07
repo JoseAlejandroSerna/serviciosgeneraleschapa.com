@@ -1,5 +1,5 @@
 <?php
-class AdminSliderController extends ControladorBase{
+class AdminPromotionController extends ControladorBase{
     public $conectar;
 	public $adapter;
 	
@@ -19,13 +19,13 @@ class AdminSliderController extends ControladorBase{
             $generalModel           = new GeneralModel($this->adapter);
             $general                = $generalModel->getAll();
 
-            $sliderModel            = new SliderModel($this->adapter);
-            $slider                 = $sliderModel->getAll();
+            $promotionModel         = new PromotionModel($this->adapter);
+            $promotion              = $promotionModel->getAll();
 
-            $this->view(VIEW_ADMIN_SLIDER,array(
+            $this->view(VIEW_ADMIN_PROMOTION,array(
                 "general"           => $general,
-                "slider"            => $slider,
-                "view" => VIEW_ADMIN_SLIDER
+                "promotion"         => $promotion,
+                "view" => VIEW_ADMIN_PROMOTION
             ));
         }
         else{
@@ -43,15 +43,15 @@ class AdminSliderController extends ControladorBase{
         if(!empty($_FILES["image_new"]["tmp_name"]))
 		{
             $imageName                          = basename($_FILES["image_new"]["name"]);
-            $dir                                = PATH_SLIDES_ADMIN;
+            $dir                                = PATH_WHO_WE_ARE_ADMIN;
             $targetFilePath                     = $dir . $imageName;
 
-            $sliderModel                        = new SliderModel($this->adapter);
-            $sliderModel->vSlider               = $_POST["title_new"];
-            $sliderModel->vInformation          = $_POST["description_new"];
-            $sliderModel->vImage                = $imageName;
+            $promotionModel                     = new PromotionModel($this->adapter);
+            $promotionModel->vPromotion         = $_POST["title_new"];
+            $promotionModel->vInformation       = $_POST["description_new"];
+            $promotionModel->vImage             = $imageName;
             
-			$sliderModel->create();
+			$promotionModel->create();
 
             if (!is_dir($dir))
             {
@@ -59,8 +59,10 @@ class AdminSliderController extends ControladorBase{
             }
 
             move_uploaded_file($_FILES["image_new"]["tmp_name"], $targetFilePath);
+            $this->redirect(CONTROLADOR_ADMIN_PROMOTION, ACCION_INDEX);
 
-            $this->redirect(CONTROLADOR_ADMIN_SLIDER, ACCION_INDEX);
+            //echo "path:".$targetFilePath." | image_new:".$_FILES['image_new']['tmp_name'];
+            //@move_uploaded_file($_FILES['image_new']['tmp_name'], $targetFilePath);
 
 		}
         else{
@@ -80,18 +82,18 @@ class AdminSliderController extends ControladorBase{
             $imageName                      = $_POST["hdnImage"];
         }
 
-        $idSlider                           = $_POST["hdnIdSlider_update"];
-        $dir                                = PATH_SLIDES_ADMIN;
+        $idPromotion                        = $_POST["hdnId_update"];
+        $dir                                = PATH_WHO_WE_ARE_ADMIN;
         $targetFilePath                     = $dir . $imageName;
 
 
-        $sliderModel                        = new SliderModel($this->adapter);
-        $sliderModel->idSlider              = $idSlider;
-        $sliderModel->vSlider               = $_POST["title_edit"];
-        $sliderModel->vInformation          = $_POST["description_edit"];
-        $sliderModel->vImage                = $imageName;
+        $promotionModel                     = new PromotionModel($this->adapter);
+        $promotionModel->idPromotion        = $idPromotion;
+        $promotionModel->vPromotion         = $_POST["title_edit"];
+        $promotionModel->vInformation       = $_POST["description_edit"];
+        $promotionModel->vImage             = $imageName;
 
-        $sliderModel->update();
+        $promotionModel->update();
 
         if (!is_dir($dir))
         {
@@ -100,20 +102,23 @@ class AdminSliderController extends ControladorBase{
         if($newImage)
         {
             move_uploaded_file($_FILES["image_edit"]["tmp_name"], $targetFilePath);
+
+            //echo "path:".$targetFilePath." | image_edit:".$_FILES['image_edit']['tmp_name'];
+            //@move_uploaded_file($_FILES['image_edit']['tmp_name'], $targetFilePath);
         }
 
-        $this->redirect(CONTROLADOR_ADMIN_SLIDER, ACCION_INDEX);
+        $this->redirect(CONTROLADOR_ADMIN_PROMOTION, ACCION_INDEX);
         
     }
 
     public function delete(){
 
-        $sliderModel                        = new SliderModel($this->adapter);
-        $sliderModel->idSlider              = $_POST["hdnIdSlider_delete"];
+        $promotionModel                     = new PromotionModel($this->adapter);
+        $promotionModel->idPromotion        = $_POST["hdnId_delete"];
         
-        $sliderModel->delete();
+        $promotionModel->delete();
 
-        $this->redirect(CONTROLADOR_ADMIN_SLIDER, ACCION_INDEX);
+        $this->redirect(CONTROLADOR_ADMIN_PROMOTION, ACCION_INDEX);
     }
 
 }

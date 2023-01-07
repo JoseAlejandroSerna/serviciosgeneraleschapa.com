@@ -244,7 +244,7 @@
                     <?php foreach($promotion as $info) { ?>
                         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 single-box wow zoomIn" data-wow-duration=".5s" data-wow-delay=".5s">
                             <div class="img-holder">
-                                <img src="<?php echo PATH_WHO_WE_ARE; ?><?php echo $info->vImage; ?>" alt="">
+                                <img src="<?php echo PATH_WHO_WE_ARE; ?><?php echo $info->vImage; ?>" alt="" style="<?php echo STYLE_MAX_HEIGHT_PROMOTION;?>">
                             </div>
                             <h2><?php echo $info->vPromotion; ?></h2>
                             <p><?php echo $info->vInformation; ?></p>

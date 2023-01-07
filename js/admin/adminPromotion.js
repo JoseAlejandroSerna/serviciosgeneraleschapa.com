@@ -6,101 +6,45 @@ function Edit(id)
 	$.each(JSON_promotion,function(i,val){
 		if(val.idPromotion == id)
 		{
-			$("#vPromotion").val(val.vPromotion);
-			$("#vDiscount").val(val.vDiscount);
-			$("[name=iStatus]").val([val.iStatus]);
+			$("#title_edit").val(val.vPromotion);
+			$("#description_edit").val(val.vInformation);
 
-			$("#idTypePromotion option[value='"+val.idTypePromotion+"']").attr('checked',true);
-			$("#idTypePromotion option[value='"+val.idTypePromotion+"']").change();
-			$("#idTypePromotion option[value='"+val.idTypePromotion+"']").prop('selected', true);
-
-			$("#iCountPurchase").val(val.iCountPurchase);
-			$("#iTotalPurchase").val(val.iTotalPurchase);
+			$(".modalImg").attr("src",PATH_WHO_WE_ARE + val.vImage);
 			
-			$(".hdn_idPromotion").val(id);
-			$(".modalEdit").click();
+			$(".hdnId_update").val(id);
+			$(".hdnImage").val(val.vImage);
+			
+			$(".btnEdit").click();
 		}
 	});	
 }
 
 function valEdit()
 {
-	$("#vPromotion").removeClass("errorContat");
-	$("#vDiscount").removeClass("errorContat");
-	$("#iStatus").removeClass("errorContat");
-	$("#idTypePromotion").removeClass("errorContat");
-	$("#iCountPurchase").removeClass("errorContat");
-
 	var send = true;
 
-	if( $("#vPromotion").val() == "")
+	if($("#title_edit").val() == "" && $("#description_edit").val() == "" && $("#image_edit").val() == "")
 	{
-		$("#vPromotion").addClass("errorContat");		send = false;
-		$(".messageError").text("Ingrese el nombre de la promoción");
-	}
-	else if( $("#vDiscount").val() == "")
-	{
-		$("#vDiscount").addClass("errorContat");		send = false;
-		$(".messageError").text("Ingrese el descuento que aplicara para la promoción");
-	}
-	else if( $("#idTypePromotion option:selected").val() == "0")
-	{
-		$("#idTypePromotion").addClass("errorContat");		send = false;
-		$(".messageError").text("Seleccione el tipo de promoción que aplicara");
-	}
-	else if( $("#iCountPurchase").val() == "")
-	{
-		$("#iCountPurchase").addClass("errorContat");		send = false;
-		$(".messageError").text("Ingrese las compras minimas para acreditar a la promoción");
-	}
-	else if( $("#iTotalPurchase").val() == "")
-	{
-		$("#iTotalPurchase").addClass("errorContat");		send = false;
-		$(".messageError").text("Ingrese el total de compras minimas para acreditar a la promoción");
+		send = false;
+		$(".messageError").text("Actualice la información por favor");
 	}
 
 	if(send)
-	{ 	
-		var status = $("input[name='iStatus']:checked").val();
-		$(".hdn_iStatus").val(status);
-		$(".btn_update").click();						
+	{
+		$(".btn_update").click();
 	}
 }
 
 function valNew()
 {
-	$("#vPromotion_new").removeClass("errorContat");
-	$("#vDiscount_new").removeClass("errorContat");
-	$("#iStatus_new").removeClass("errorContat");
-	$("#idTypePromotion_new").removeClass("errorContat");
-	$("#iCountPurchase_new").removeClass("errorContat");
+	$("#image_new").removeClass("errorContat");
 
 	var send = true;
 
-	if( $("#vPromotion_new").val() == "")
+	if( $("#image_new").val() == "")
 	{
-		$("#vPromotion_new").addClass("errorContat");		send = false;
-		$(".messageError").text("Ingrese el nombre de la promoción");
-	}
-	else if( $("#vDiscount_new").val() == "")
-	{
-		$("#vDiscount_new").addClass("errorContat");		send = false;
-		$(".messageError").text("Ingrese el descuento que aplicara para la promoción");
-	}
-	else if( $("#idTypePromotion_new option:selected").val() == "0")
-	{
-		$("#idTypePromotion_new").addClass("errorContat");		send = false;
-		$(".messageError").text("Seleccione el tipo de promoción que aplicara");
-	}
-	else if( $("#iCountPurchase_new").val() == "")
-	{
-		$("#iCountPurchase_new").addClass("errorContat");		send = false;
-		$(".messageError").text("Ingrese las compras minimas para acreditar a la promoción");
-	}
-	else if( $("#iTotalPurchase_new").val() == "")
-	{
-		$("#iTotalPurchase_new").addClass("errorContat");		send = false;
-		$(".messageError").text("Ingrese el total de compras minimas para acreditar a la promoción");
+		$("#image_new").addClass("errorContat");		send = false;
+		$(".messageError").text("Ingrese una imagen.");
 	}
 
 	if(send)
@@ -111,6 +55,6 @@ function valNew()
 
 function Delete(id)
 {
-	$(".hdn_idPromotion_delete").val(id);
-	$(".modalDelete").click();
+	$(".hdnId_delete").val(id);
+	$(".btnDelete").click();
 }

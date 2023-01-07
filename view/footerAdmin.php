@@ -15,6 +15,7 @@
 <script src="js/admin/mdtechnology.js"></script>
 
 <?php if($view == VIEW_ADMIN_SLIDER ||
+        $view == VIEW_ADMIN_PROMOTION ||
         $view == "AdminQuestions"){?>
         
     <script src="js/admin/raphael.min.js"></script>
@@ -33,7 +34,7 @@
 <?php if($view == VIEW_ADMIN_SLIDER){?>
     <script src="js/admin/adminSlider.js"></script>
 <?php }?>
-<?php if($view == CONTROLADOR_ADMIN_PROMOTION){?>
+<?php if($view == VIEW_ADMIN_PROMOTION){?>
     <script src="js/admin/adminPromotion.js"></script>
 <?php }?>
 <?php if($view == "AdminQuestions"){?>
