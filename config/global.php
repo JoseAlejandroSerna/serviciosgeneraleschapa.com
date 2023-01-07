@@ -31,6 +31,7 @@ VIEW
 define("VIEW_MAIN", "index");
 define("VIEW_ADMIN", "admin");
 define("VIEW_ADMIN_GENERAL", "adminGeneral");
+define("VIEW_ADMIN_SLIDER", "adminSlider");
 
 /*------------------------------
 FUNCTION
@@ -87,6 +88,7 @@ define("TITLE_CONFIGURATION", "Configuración general");
 define("TITLE_SOCIAL_NETWORK", "Redes sociales");
 define("TITLE_GENERAL", "Información general");
 define("TITLE_LOGO", "Logo de sitio");
+define("TITLE_SLIDER", "Carrusel principal");
 
 /*------------------------------
 STYLE
