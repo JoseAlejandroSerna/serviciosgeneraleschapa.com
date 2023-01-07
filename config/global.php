@@ -6,6 +6,7 @@ define("ACCION_INDEX", "index");
 define("LENGUAGE_DEFAULT", "1");
 define("USER_DEFAULT", "0");
 define("VALUE_ZERO", "0");
+define("VALUE_ONE", "1");
 
 /*------------------------------
 TYPE USER
@@ -29,20 +30,26 @@ VIEW
 ------------------------------*/
 define("VIEW_MAIN", "index");
 define("VIEW_ADMIN", "admin");
+define("VIEW_ADMIN_GENERAL", "adminGeneral");
 
 /*------------------------------
 FUNCTION
 ------------------------------*/
 define("ACTION_CREATE", "create");
 define("ACTION_DELETE", "delete");
+define("ACTION_UPDATE", "update");
 define("ACTION_LOGIN", "login");
 define("ACTION_LOGOUT", "logout");
 define("ACTION_EMAIL", "email");
+define("ACTION_SOCIAL_NETWORK", "socialNetwork");
+define("ACTION_GENERAL", "general");
+define("ACTION_LOGO", "logo");
 
 /*------------------------------
 PATH IMAGE
 ------------------------------*/
 define("PATH_RESOURCES", "../assets/images/resources/");
+define("PATH_RESOURCES_ADMIN", "assets/images/resources/");
 define("PATH_SLIDES", "../assets/images/slides/");
 define("PATH_WHO_WE_ARE", "../assets/images/who-we-are/");
 define("PATH_SERVICE_WE_PROVIDE", "../assets/images/service-we-provide/");
@@ -72,4 +79,17 @@ define("TABLE_SOCIAL_NETWORKS", "SocialNetworks");
 define("TABLE_GENERAL", "General");
 define("TABLE_USER", "User");
 define("TABLE_TYPE_USER", "TypeUser");
+
+/*------------------------------
+TITLE
+------------------------------*/
+define("TITLE_CONFIGURATION", "Configuración general");
+define("TITLE_SOCIAL_NETWORK", "Redes sociales");
+define("TITLE_GENERAL", "Información general");
+define("TITLE_LOGO", "Logo de sitio");
+
+/*------------------------------
+STYLE
+------------------------------*/
+define("STYLE_MAX_LOGO", "max-height: 55px;");
 ?>

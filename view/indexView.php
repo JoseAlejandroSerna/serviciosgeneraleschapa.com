@@ -108,8 +108,8 @@
                                 }
                             }
                         ?>
-                        <a href="index.html">
-                            <img src="<?php echo PATH_RESOURCES; ?><?php echo $vLogo; ?>" alt="Servicios generales Chapa" style="max-height: 55px;">
+                        <a href="<?php echo $helper->url(CONTROLADOR_MAIN,ACCION_INDEX); ?>">
+                            <img src="<?php echo PATH_RESOURCES; ?><?php echo $vLogo; ?>" alt="Servicios generales Chapa" style="<?php echo STYLE_MAX_LOGO;?>">
                         </a>
                     </div>
 

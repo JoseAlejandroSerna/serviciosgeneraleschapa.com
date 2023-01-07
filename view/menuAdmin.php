@@ -2,24 +2,6 @@
     var varView = '<?php echo $view; ?>';
 </script>
 
-<?php if($view == "AdminUser"){ ?>
-<script>
-    var all_user = '<?php echo json_encode($all_user); ?>';
-    var JSON_all_user = JSON.parse(all_user);
-</script>
-<?php } ?>
-
-<?php
-$iSale = "0";
-$iRent = "0";
-$iMaking = "0";
-foreach($info_notifications as $notifications) {
-    $iSale      = $notifications->iSale;
-    $iRent      = $notifications->iRent;
-    $iMaking    = $notifications->iMaking;
-}
-?>
-
 <aside id="layoutSideLeft_nav">
 
     <nav class="sidenav shadow-right sidenav-light">

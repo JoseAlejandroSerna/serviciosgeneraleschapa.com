@@ -16,7 +16,11 @@ class AdminController extends ControladorBase{
         
         if ($_SESSION['idTypeUser'] == TYPE_USER_ADMINISTRADOR && isset($_SESSION['idTypeUser'])) {
 
+            $generalModel           = new GeneralModel($this->adapter);
+            $general                = $generalModel->getAll();
+
             $this->view(VIEW_ADMIN,array(
+                "general"           => $general,
                 "view" => VIEW_ADMIN
             ));
         }
