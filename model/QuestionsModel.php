@@ -64,7 +64,7 @@ class QuestionsModel{
                 vQuestion = '$this->vQuestion', 
                 vResponse = '$this->vResponse'
                 WHERE
-                idQuestions = $this->idQuestions";
+                idQuestion = $this->idQuestion";
 
         $update = mysqli_query($this->db(),$query);
         if(!$update){

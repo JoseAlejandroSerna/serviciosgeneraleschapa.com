@@ -3,65 +3,58 @@ $(document).ready(function () {
 
 function Edit(id)
 {
-	
 	$.each(JSON_questions,function(i,val){
-		if(val.idQuestions == id)
+		if(val.idQuestion == id)
 		{
-			$("#name_edit").val(val.vQuestions);
-			$(".hdn_idQuestions_update").val(val.idQuestions);
-			$(".btn_modalEdit").click();
+			$('#title_edit').val(val.vQuestion);
+			$("#description_edit").val(val.vResponse);
+
+			$(".hdnId_update").val(id);
+			
+			$(".btnEdit").click();
 		}
 	});	
 }
 
 function valEdit()
 {
-	cleanClassError();
 	var send = true;
 
-
-	if( $("#name_edit").val() == "")
+	if($('#title_edit').val() == "" || $("#description_edit").val() == "")
 	{
-		$("#name_edit").addClass("errorContat");		send = false;
-		$(".messageError").text("Ingrese el nombre de la encuesta");
+		send = false;
+		$(".messageError").text("Actualice la información por favor");
 	}
 
 	if(send)
-	{ 	
-		var status = 1;
-		$(".hdn_vQuestions_update").val($("#name_edit").val());
-		$(".btn_update").click();						
+	{
+		$(".btn_update").click();
 	}
 }
 
 function valNew()
 {
-	cleanClassError();
 	var send = true;
 
-
-	if( $("#name_new").val() == "")
+	if($('#title_new').val() == "")
 	{
-		$("#name_new").addClass("errorContat");		send = false;
-		$(".messageError").text("Ingrese una pregunta para la encuesta");
+		send = false;
+		$(".messageError").text("Ingrese una pregunta");
+	}
+	else if( $("#description_new").val() == "")
+	{
+		$("#description_new").addClass("errorContat");		send = false;
+		$(".messageError").text("Ingrese una respuesta");
 	}
 
 	if(send)
-	{ 	
-		var status = 1;
-		$(".hdn_vQuestions_create").val($("#name_new").val());
+	{
 		$(".btn_create").click();						
 	}
 }
 
-function cleanClassError()
-{
-	$("#name_edit").removeClass("errorContat");
-	$("#name_new").removeClass("errorContat")
-}
-
 function Delete(id)
 {
-	$(".hdn_id_delete").val(id);
-	$(".btn_modalDelete").click();
+	$(".hdnId_delete").val(id);
+	$(".btnDelete").click();
 }

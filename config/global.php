@@ -44,7 +44,7 @@ define("VIEW_ADMIN_SERVICE_DETAIL", "adminServiceDetail");
 define("VIEW_ADMIN_PROJECT", "adminProject");
 define("VIEW_ADMIN_OFFER", "adminOffer");
 define("VIEW_ADMIN_OFFER_DETAIL", "adminOfferDetail");
-define("VIEW_ADMIN_QUESTIONS_DETAIL", "adminQuestions");
+define("VIEW_ADMIN_QUESTIONS", "adminQuestions");
 
 /*------------------------------
 FUNCTION
