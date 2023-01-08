@@ -44,6 +44,7 @@
     <?php if($view == VIEW_ADMIN_SLIDER || 
             $view == VIEW_ADMIN_PROMOTION || 
             $view == VIEW_ADMIN_SERVICE ||
+            $view == VIEW_ADMIN_PROJECT ||
             $view == VIEW_ADMIN_SERVICE_DETAIL){ ?>
         <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>

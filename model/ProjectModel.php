@@ -45,6 +45,21 @@ class ProjectModel{
         return $resultSet;
     }
 
+    public function create()
+    {
+        $query="INSERT INTO $this->table (idProject,idService,vProject,vInformation,vImage) 
+                VALUES(NULL,
+                        $this->idService,
+                        '$this->vProject',
+                        '$this->vInformation',
+                        '$this->vImage');";
+
+        $save = mysqli_query($this->db(),$query);
+        if(!$save){
+            die("QUERY FAILED.");
+        }
+    }
+
     public function update()
     {
         $query="UPDATE $this->table 

@@ -407,7 +407,7 @@
                             <div class="masonary-item width-1 service-<?php echo $info->idService; ?>">
                                 <a class="fancybox" href="<?php echo PATH_OUR_PROJECTS; ?><?php echo $info->vImage; ?>">
                                     <div class="img-wrap">
-                                        <img src="<?php echo PATH_OUR_PROJECTS; ?><?php echo $info->vImage; ?>" alt="">
+                                        <img src="<?php echo PATH_OUR_PROJECTS; ?><?php echo $info->vImage; ?>" alt="" style="<?php echo STYLE_MAX_HEIGHT_PROJECT;?>">
                                         <div class="content-wrap">
                                             <div class="border">
                                                 <div class="content">

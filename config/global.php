@@ -26,6 +26,8 @@ define("CONTROLADOR_ADMIN_USER", "AdminUser");
 define("CONTROLADOR_ADMIN_PROMOTION", "AdminPromotion");
 define("CONTROLADOR_ADMIN_SERVICE", "AdminService");
 define("CONTROLADOR_ADMIN_SERVICE_DETAIL", "AdminServiceDetail");
+define("CONTROLADOR_ADMIN_PROJECT", "AdminProject");
+define("CONTROLADOR_ADMIN_OFFER", "AdminOffer");
 
 /*------------------------------
 VIEW
@@ -37,6 +39,8 @@ define("VIEW_ADMIN_SLIDER", "adminSlider");
 define("VIEW_ADMIN_PROMOTION", "adminPromotion");
 define("VIEW_ADMIN_SERVICE", "adminService");
 define("VIEW_ADMIN_SERVICE_DETAIL", "adminServiceDetail");
+define("VIEW_ADMIN_PROJECT", "adminProject");
+define("VIEW_ADMIN_OFFER", "adminOffer");
 
 /*------------------------------
 FUNCTION
@@ -58,6 +62,7 @@ define("PATH_RESOURCES_ADMIN", "assets/images/resources/");
 define("PATH_SLIDES_ADMIN", "assets/images/slides/");
 define("PATH_WHO_WE_ARE_ADMIN", "assets/images/who-we-are/");
 define("PATH_SERVICE_WE_PROVIDE_ADMIN", "assets/images/service-we-provide/");
+define("PATH_OUR_PROJECTS_ADMIN", "assets/images/our-projects/");
 
 define("PATH_RESOURCES", "../assets/images/resources/");
 define("PATH_SLIDES", "../assets/images/slides/");
@@ -101,6 +106,7 @@ define("TITLE_SLIDER", "Carrusel principal");
 define("TITLE_PROMOTION", "Promociones");
 define("TITLE_SERVICE", "Servicios");
 define("TITLE_SERVICE_DETAIL", "Detalle de servicios");
+define("TITLE_PROJECT", "Proyectos");
 
 /*------------------------------
 STYLE
@@ -108,4 +114,5 @@ STYLE
 define("STYLE_MAX_LOGO", "max-height: 55px;");
 define("STYLE_MAX_HEIGHT_PROMOTION", "max-height: 169px;");
 define("STYLE_MAX_HEIGHT_SERVICE", "max-height: 165px;");
+define("STYLE_MAX_HEIGHT_PROJECT", "max-height: 2455px;");
 ?>
