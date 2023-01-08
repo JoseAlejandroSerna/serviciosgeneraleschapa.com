@@ -43,10 +43,24 @@ class OfferDetailModel{
         return $resultSet;
     }
 
+    public function create()
+    {
+        $query="INSERT INTO $this->table (idOfferDetail,idOffer,vOfferDetail) 
+                VALUES(NULL,
+                       '$this->idOffer',
+                       '$this->vOfferDetail');";
+
+        $save = mysqli_query($this->db(),$query);
+        if(!$save){
+            die("QUERY FAILED.");
+        }
+    }
+
     public function update()
     {
         $query="UPDATE $this->table 
                 SET
+                idOffer = '$this->idOffer',
                 vOfferDetail = '$this->vOfferDetail'
                 WHERE
                 idOfferDetail = $this->idOfferDetail";

@@ -28,6 +28,8 @@ define("CONTROLADOR_ADMIN_SERVICE", "AdminService");
 define("CONTROLADOR_ADMIN_SERVICE_DETAIL", "AdminServiceDetail");
 define("CONTROLADOR_ADMIN_PROJECT", "AdminProject");
 define("CONTROLADOR_ADMIN_OFFER", "AdminOffer");
+define("CONTROLADOR_ADMIN_OFFER_DETAIL", "AdminOfferDetail");
+define("CONTROLADOR_ADMIN_QUESTIONS", "AdminQuestions");
 
 /*------------------------------
 VIEW
@@ -41,6 +43,8 @@ define("VIEW_ADMIN_SERVICE", "adminService");
 define("VIEW_ADMIN_SERVICE_DETAIL", "adminServiceDetail");
 define("VIEW_ADMIN_PROJECT", "adminProject");
 define("VIEW_ADMIN_OFFER", "adminOffer");
+define("VIEW_ADMIN_OFFER_DETAIL", "adminOfferDetail");
+define("VIEW_ADMIN_QUESTIONS_DETAIL", "adminQuestions");
 
 /*------------------------------
 FUNCTION
@@ -108,6 +112,8 @@ define("TITLE_SERVICE", "Servicios");
 define("TITLE_SERVICE_DETAIL", "Detalle de servicios");
 define("TITLE_PROJECT", "Proyectos");
 define("TITLE_OFFER", "Precios");
+define("TITLE_OFFER_DETAIL", "Detalle de precios");
+define("TITLE_QUESTIONS", "Preguntas frecuentes");
 
 /*------------------------------
 STYLE

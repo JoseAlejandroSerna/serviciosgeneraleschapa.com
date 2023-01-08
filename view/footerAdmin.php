@@ -20,6 +20,7 @@
         $view == VIEW_ADMIN_SERVICE_DETAIL ||
         $view == VIEW_ADMIN_PROJECT ||
         $view == VIEW_ADMIN_OFFER ||
+        $view == VIEW_ADMIN_OFFER_DETAIL ||
         $view == "AdminQuestions"){?>
         
     <script src="js/admin/raphael.min.js"></script>
@@ -52,6 +53,9 @@
 <?php }?>
 <?php if($view == VIEW_ADMIN_OFFER){?>
     <script src="js/admin/adminOffer.js"></script>
+<?php }?>
+<?php if($view == VIEW_ADMIN_OFFER_DETAIL){?>
+    <script src="js/admin/adminOfferDetail.js"></script>
 <?php }?>
 <?php if($view == "AdminQuestions"){?>
     <script src="js/admin/adminQuestions.js"></script>

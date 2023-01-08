@@ -538,11 +538,11 @@
                 <div class="row price-table-wrap">
 
                     <?php 
-                        $cont = 1;
+                        $cont = 0;
                         $class = "";
                         foreach($offer as $info) { 
                         
-                        if($cont == 1) $class = "bronze";
+                        if($cont == 0) $class = "bronze";
                         if($cont == 1) $class = "silver";
                         if($cont == 2) $class = "gold";
                         if($cont == 3) $class = "platinum";
@@ -570,7 +570,11 @@
                         </div>
                 <?php  
                     $cont++;
+
+                    if($cont>3){
+                        $cont = 0; 
                     }
+                }
                 ?>
 
                 </div>

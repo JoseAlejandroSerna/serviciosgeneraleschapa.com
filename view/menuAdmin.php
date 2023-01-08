@@ -50,6 +50,16 @@
                         <div class="nav-link-icon"><i data-feather="package"></i></div> Paquetes
                         <div class="sidenav-collapse-arrow"></div>
                     </a>
+
+                    <a class="waves-effect waves-dark nav-link" href="<?php echo $helper->url(CONTROLADOR_ADMIN_OFFER_DETAIL,ACCION_INDEX); ?>">
+                        <div class="nav-link-icon"><i data-feather="package"></i></div> Detalle de paquetes
+                        <div class="sidenav-collapse-arrow"></div>
+                    </a>
+
+                    <a class="waves-effect waves-dark nav-link" href="<?php echo $helper->url(CONTROLADOR_ADMIN_OFFER_DETAIL,ACCION_INDEX); ?>">
+                        <div class="nav-link-icon"><i data-feather="package"></i></div> Detalle de paquetes
+                        <div class="sidenav-collapse-arrow"></div>
+                    </a>
                     <!--<a class="waves-effect waves-dark nav-link" href="<?php echo $helper->url(CONTROLADOR_ADMIN_USER,ACCION_INDEX); ?>">
                         <div class="nav-link-icon"><i data-feather="user"></i></div> Usuarios
                         <div class="sidenav-collapse-arrow"></div>
