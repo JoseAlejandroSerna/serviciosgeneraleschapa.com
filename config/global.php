@@ -25,6 +25,7 @@ define("CONTROLADOR_ADMIN_SLIDER", "AdminSlider");
 define("CONTROLADOR_ADMIN_USER", "AdminUser");
 define("CONTROLADOR_ADMIN_PROMOTION", "AdminPromotion");
 define("CONTROLADOR_ADMIN_SERVICE", "AdminService");
+define("CONTROLADOR_ADMIN_SERVICE_DETAIL", "AdminServiceDetail");
 
 /*------------------------------
 VIEW
@@ -35,6 +36,7 @@ define("VIEW_ADMIN_GENERAL", "adminGeneral");
 define("VIEW_ADMIN_SLIDER", "adminSlider");
 define("VIEW_ADMIN_PROMOTION", "adminPromotion");
 define("VIEW_ADMIN_SERVICE", "adminService");
+define("VIEW_ADMIN_SERVICE_DETAIL", "adminServiceDetail");
 
 /*------------------------------
 FUNCTION
@@ -98,6 +100,7 @@ define("TITLE_LOGO", "Logo de sitio");
 define("TITLE_SLIDER", "Carrusel principal");
 define("TITLE_PROMOTION", "Promociones");
 define("TITLE_SERVICE", "Servicios");
+define("TITLE_SERVICE_DETAIL", "Detalle de servicios");
 
 /*------------------------------
 STYLE

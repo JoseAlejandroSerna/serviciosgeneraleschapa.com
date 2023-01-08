@@ -43,10 +43,24 @@ class ServiceDetailModel{
         return $resultSet;
     }
 
+    public function create()
+    {
+        $query="INSERT INTO $this->table (idServiceDetail,idService,vServiceDetail) 
+                VALUES(NULL,
+                       '$this->idService',
+                       '$this->vServiceDetail');";
+
+        $save = mysqli_query($this->db(),$query);
+        if(!$save){
+            die("QUERY FAILED.");
+        }
+    }
+
     public function update()
     {
         $query="UPDATE $this->table 
                 SET
+                idService = '$this->idService',
                 vServiceDetail = '$this->vServiceDetail'
                 WHERE
                 idServiceDetail = $this->idServiceDetail";

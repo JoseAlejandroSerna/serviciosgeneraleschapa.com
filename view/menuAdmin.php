@@ -35,6 +35,11 @@
                         <div class="nav-link-icon"><i data-feather="package"></i></div> Servicios
                         <div class="sidenav-collapse-arrow"></div>
                     </a>
+
+                    <a class="waves-effect waves-dark nav-link" href="<?php echo $helper->url(CONTROLADOR_ADMIN_SERVICE_DETAIL,ACCION_INDEX); ?>">
+                        <div class="nav-link-icon"><i data-feather="package"></i></div> Detalle de servicios
+                        <div class="sidenav-collapse-arrow"></div>
+                    </a>
                     <!--<a class="waves-effect waves-dark nav-link" href="<?php echo $helper->url(CONTROLADOR_ADMIN_USER,ACCION_INDEX); ?>">
                         <div class="nav-link-icon"><i data-feather="user"></i></div> Usuarios
                         <div class="sidenav-collapse-arrow"></div>

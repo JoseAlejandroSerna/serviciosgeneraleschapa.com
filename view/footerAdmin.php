@@ -16,6 +16,8 @@
 
 <?php if($view == VIEW_ADMIN_SLIDER ||
         $view == VIEW_ADMIN_PROMOTION ||
+        $view == VIEW_ADMIN_SERVICE ||
+        $view == VIEW_ADMIN_SERVICE_DETAIL ||
         $view == "AdminQuestions"){?>
         
     <script src="js/admin/raphael.min.js"></script>
@@ -39,6 +41,9 @@
 <?php }?>
 <?php if($view == VIEW_ADMIN_SERVICE){?>
     <script src="js/admin/adminService.js"></script>
+<?php }?>
+<?php if($view == VIEW_ADMIN_SERVICE_DETAIL){?>
+    <script src="js/admin/adminServiceDetail.js"></script>
 <?php }?>
 <?php if($view == "AdminQuestions"){?>
     <script src="js/admin/adminQuestions.js"></script>
