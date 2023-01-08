@@ -107,6 +107,7 @@ define("TITLE_PROMOTION", "Promociones");
 define("TITLE_SERVICE", "Servicios");
 define("TITLE_SERVICE_DETAIL", "Detalle de servicios");
 define("TITLE_PROJECT", "Proyectos");
+define("TITLE_OFFER", "Precios");
 
 /*------------------------------
 STYLE

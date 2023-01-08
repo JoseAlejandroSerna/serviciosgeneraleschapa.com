@@ -43,6 +43,19 @@ class OfferModel{
         return $resultSet;
     }
 
+    public function create()
+    {
+        $query="INSERT INTO $this->table (idOffer,vOffer,iPrice) 
+                VALUES(NULL,
+                        '$this->vOffer',
+                        $this->iPrice);";
+
+        $save = mysqli_query($this->db(),$query);
+        if(!$save){
+            die("QUERY FAILED.");
+        }
+    }
+
     public function update()
     {
         $query="UPDATE $this->table 

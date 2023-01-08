@@ -40,35 +40,35 @@ class AdminOfferController extends ControladorBase{
 
     public function create(){
 
-        $serviceDetailModel                     = new ServiceDetailModel($this->adapter);
-        $serviceDetailModel->idService          = $_POST["hdnIdService_create"];
-        $serviceDetailModel->vServiceDetail     = $_POST["description_new"];
+        $offerModel                     = new OfferModel($this->adapter);
+        $offerModel->vOffer             = $_POST["title_new"];
+        $offerModel->iPrice             = $_POST["description_new"];
         
-        $serviceDetailModel->create();
+        $offerModel->create();
 
-        $this->redirect(CONTROLADOR_ADMIN_SERVICE_DETAIL, ACCION_INDEX);
+        $this->redirect(CONTROLADOR_ADMIN_OFFER, ACCION_INDEX);
     }
 
     public function update(){
 
-        $serviceDetailModel                     = new ServiceDetailModel($this->adapter);
-        $serviceDetailModel->idService          = $_POST["hdnIdService_update"];
-        $serviceDetailModel->idServiceDetail    = $_POST["hdnId_update"];
-        $serviceDetailModel->vServiceDetail     = $_POST["description_edit"];
+        $offerModel                     = new OfferModel($this->adapter);
+        $offerModel->idOffer            = $_POST["hdnId_update"];
+        $offerModel->vOffer             = $_POST["title_edit"];
+        $offerModel->iPrice             = $_POST["description_edit"];
         
-        $serviceDetailModel->update();
+        $offerModel->update();
 
-        $this->redirect(CONTROLADOR_ADMIN_SERVICE_DETAIL, ACCION_INDEX);
+        $this->redirect(CONTROLADOR_ADMIN_OFFER, ACCION_INDEX);
     }
 
     public function delete(){
 
-        $serviceDetailModel                     = new ServiceDetailModel($this->adapter);
-        $serviceDetailModel->idServiceDetail    = $_POST["hdnId_delete"];
+        $offerModel                     = new OfferModel($this->adapter);
+        $offerModel->idOffer            = $_POST["hdnId_delete"];
         
-        $serviceDetailModel->delete();
+        $offerModel->delete();
 
-        $this->redirect(CONTROLADOR_ADMIN_SERVICE_DETAIL, ACCION_INDEX);
+        $this->redirect(CONTROLADOR_ADMIN_OFFER, ACCION_INDEX);
     }
 
 }
