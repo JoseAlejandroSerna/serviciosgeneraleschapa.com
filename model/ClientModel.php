@@ -43,6 +43,19 @@ class ClientModel{
         return $resultSet;
     }
 
+    public function create()
+    {
+        $query="INSERT INTO $this->table (idClient,vClient,vImage) 
+                VALUES(NULL,
+                       '$this->vClient',
+                       '$this->vImage');";
+
+        $save = mysqli_query($this->db(),$query);
+        if(!$save){
+            die("QUERY FAILED.");
+        }
+    }
+
     public function update()
     {
         $query="UPDATE $this->table 

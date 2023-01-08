@@ -61,6 +61,9 @@
 <?php if($view == VIEW_ADMIN_QUESTIONS){?>
     <script src="js/admin/adminQuestions.js"></script>
 <?php }?>
+<?php if($view == VIEW_ADMIN_CLIENT){?>
+    <script src="js/admin/adminClient.js"></script>
+<?php }?>
 <?php if($view == "AdminQuestions"){?>
     <script src="js/admin/adminQuestions.js"></script>
 <?php }?>

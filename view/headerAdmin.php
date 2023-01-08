@@ -48,6 +48,7 @@
             $view == VIEW_ADMIN_SERVICE_DETAIL ||
             $view == VIEW_ADMIN_OFFER ||
             $view == VIEW_ADMIN_OFFER_DETAIL ||
+            $view == VIEW_ADMIN_CLIENT ||
             $view == VIEW_ADMIN_QUESTIONS){ ?>
         <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>

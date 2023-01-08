@@ -30,6 +30,7 @@ define("CONTROLADOR_ADMIN_PROJECT", "AdminProject");
 define("CONTROLADOR_ADMIN_OFFER", "AdminOffer");
 define("CONTROLADOR_ADMIN_OFFER_DETAIL", "AdminOfferDetail");
 define("CONTROLADOR_ADMIN_QUESTIONS", "AdminQuestions");
+define("CONTROLADOR_ADMIN_CLIENT", "AdminClient");
 
 /*------------------------------
 VIEW
@@ -45,6 +46,7 @@ define("VIEW_ADMIN_PROJECT", "adminProject");
 define("VIEW_ADMIN_OFFER", "adminOffer");
 define("VIEW_ADMIN_OFFER_DETAIL", "adminOfferDetail");
 define("VIEW_ADMIN_QUESTIONS", "adminQuestions");
+define("VIEW_ADMIN_CLIENT", "adminClient");
 
 /*------------------------------
 FUNCTION
@@ -67,6 +69,7 @@ define("PATH_SLIDES_ADMIN", "assets/images/slides/");
 define("PATH_WHO_WE_ARE_ADMIN", "assets/images/who-we-are/");
 define("PATH_SERVICE_WE_PROVIDE_ADMIN", "assets/images/service-we-provide/");
 define("PATH_OUR_PROJECTS_ADMIN", "assets/images/our-projects/");
+define("PATH_CLIENTS_ADMIN", "assets/images/clients/");
 
 define("PATH_RESOURCES", "../assets/images/resources/");
 define("PATH_SLIDES", "../assets/images/slides/");
@@ -114,6 +117,7 @@ define("TITLE_PROJECT", "Proyectos");
 define("TITLE_OFFER", "Precios");
 define("TITLE_OFFER_DETAIL", "Detalle de precios");
 define("TITLE_QUESTIONS", "Preguntas frecuentes");
+define("TITLE_CLIENT", "Clientes con los que trabajamos");
 
 /*------------------------------
 STYLE
@@ -122,4 +126,5 @@ define("STYLE_MAX_LOGO", "max-height: 55px;");
 define("STYLE_MAX_HEIGHT_PROMOTION", "max-height: 169px;");
 define("STYLE_MAX_HEIGHT_SERVICE", "max-height: 165px;");
 define("STYLE_MAX_HEIGHT_PROJECT", "max-height: 2455px;");
+define("STYLE_MAX_HEIGHT_CLIENT", "max-height: 53px;");
 ?>

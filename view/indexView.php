@@ -701,7 +701,7 @@
                         <div class="owl-carousel owl-theme">
                             <?php foreach($client as $info) { ?>
                                 <div class="item">
-                                    <img src="<?php echo PATH_CLIENTS; ?><?php echo $info->vImage; ?>" alt="">
+                                    <img src="<?php echo PATH_CLIENTS; ?><?php echo $info->vImage; ?>" alt="" style="<?php echo STYLE_MAX_HEIGHT_CLIENT;?>">
                                 </div>
                             <?php  }?>
                         </div>
