@@ -31,6 +31,7 @@ define("CONTROLADOR_ADMIN_OFFER", "AdminOffer");
 define("CONTROLADOR_ADMIN_OFFER_DETAIL", "AdminOfferDetail");
 define("CONTROLADOR_ADMIN_QUESTIONS", "AdminQuestions");
 define("CONTROLADOR_ADMIN_CLIENT", "AdminClient");
+define("CONTROLADOR_ADMIN_CHOOSE", "AdminChoose");
 
 /*------------------------------
 VIEW
@@ -47,6 +48,7 @@ define("VIEW_ADMIN_OFFER", "adminOffer");
 define("VIEW_ADMIN_OFFER_DETAIL", "adminOfferDetail");
 define("VIEW_ADMIN_QUESTIONS", "adminQuestions");
 define("VIEW_ADMIN_CLIENT", "adminClient");
+define("VIEW_ADMIN_CHOOSE", "adminChoose");
 
 /*------------------------------
 FUNCTION
@@ -118,6 +120,7 @@ define("TITLE_OFFER", "Precios");
 define("TITLE_OFFER_DETAIL", "Detalle de precios");
 define("TITLE_QUESTIONS", "Preguntas frecuentes");
 define("TITLE_CLIENT", "Clientes con los que trabajamos");
+define("TITLE_CHOOSE", "Porque confiar en nosotros");
 
 /*------------------------------
 STYLE

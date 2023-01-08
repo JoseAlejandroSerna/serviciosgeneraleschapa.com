@@ -17,12 +17,12 @@
                     <div class="sidenav-menu-heading">-- Configuración sitio web </div>
 
                     <a class="waves-effect waves-dark nav-link" href="<?php echo $helper->url(CONTROLADOR_ADMIN_GENERAL,ACCION_INDEX); ?>">
-                        <div class="nav-link-icon"><i data-feather="tool"></i></div> Informacion General
+                        <div class="nav-link-icon"><i data-feather="package"></i></div> Informacion General
                         <div class="sidenav-collapse-arrow"></div>
                     </a>
                     
                     <a class="waves-effect waves-dark nav-link" href="<?php echo $helper->url(CONTROLADOR_ADMIN_SLIDER,ACCION_INDEX); ?>">
-                        <div class="nav-link-icon"><i data-feather="tool"></i></div> Carrusel
+                        <div class="nav-link-icon"><i data-feather="package"></i></div> Carrusel
                         <div class="sidenav-collapse-arrow"></div>
                     </a>
 
@@ -43,6 +43,11 @@
 
                     <a class="waves-effect waves-dark nav-link" href="<?php echo $helper->url(CONTROLADOR_ADMIN_PROJECT,ACCION_INDEX); ?>">
                         <div class="nav-link-icon"><i data-feather="package"></i></div> Proyectos
+                        <div class="sidenav-collapse-arrow"></div>
+                    </a>
+
+                    <a class="waves-effect waves-dark nav-link" href="<?php echo $helper->url(CONTROLADOR_ADMIN_CHOOSE,ACCION_INDEX); ?>">
+                        <div class="nav-link-icon"><i data-feather="package"></i></div> Porque confiar en nosotros
                         <div class="sidenav-collapse-arrow"></div>
                     </a>
 

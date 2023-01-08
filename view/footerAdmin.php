@@ -22,6 +22,7 @@
         $view == VIEW_ADMIN_OFFER ||
         $view == VIEW_ADMIN_OFFER_DETAIL ||
         $view == VIEW_ADMIN_QUESTIONS ||
+        $view == VIEW_ADMIN_CHOOSE ||
         $view == "AdminQuestions"){?>
         
     <script src="js/admin/raphael.min.js"></script>
@@ -63,6 +64,9 @@
 <?php }?>
 <?php if($view == VIEW_ADMIN_CLIENT){?>
     <script src="js/admin/adminClient.js"></script>
+<?php }?>
+<?php if($view == VIEW_ADMIN_CHOOSE){?>
+    <script src="js/admin/adminChoose.js"></script>
 <?php }?>
 <?php if($view == "AdminQuestions"){?>
     <script src="js/admin/adminQuestions.js"></script>

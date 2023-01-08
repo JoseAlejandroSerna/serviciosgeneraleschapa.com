@@ -41,7 +41,7 @@
                                                     <div class="row mb-4">
                                                 		<div class="col-12">
 															<button type="button" class="btn btn-primary btnModalPaquetes" data-toggle="modal" data-target="#exampleModal7">
-																Nueva imagen
+																Nueva pregunta
 															</button>
                                                 		</div>
                                                     </div>

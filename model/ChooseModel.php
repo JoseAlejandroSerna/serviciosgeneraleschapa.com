@@ -49,6 +49,25 @@ class ChooseModel{
         return $resultSet;
     }
 
+    public function create()
+    {
+        $query="INSERT INTO $this->table (idChoose,vTime,vTeam,vSatisfaction,vEstimate,vTimeInfo,vTeamInfo,vSatisfactionInfo,vEstimateInfo) 
+                VALUES(NULL,
+                       '$this->vTime',
+                       '$this->vTeam',
+                       '$this->vSatisfaction',
+                       '$this->vEstimate',
+                       '$this->vTimeInfo',
+                       '$this->vTeamInfo',
+                       '$this->vSatisfactionInfo',
+                       '$this->vEstimateInfo');";
+
+        $save = mysqli_query($this->db(),$query);
+        if(!$save){
+            die("QUERY FAILED.");
+        }
+    }
+
     public function update()
     {
         $query="UPDATE $this->table 
